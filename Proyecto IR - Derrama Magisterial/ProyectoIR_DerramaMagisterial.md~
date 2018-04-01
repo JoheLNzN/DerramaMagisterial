@@ -982,6 +982,12 @@
 				stereotype 	"Business Entity")
 			    (object Class "E03-Cheque"
 				quid       	"5AC0379202CA"
+				stereotype 	"Business Entity")
+			    (object Class "E04-Hoja de visita"
+				quid       	"5AC03A02001D"
+				stereotype 	"Business Entity")
+			    (object Class "E05-Lista de pre-aprobados"
+				quid       	"5AC03A23034C"
 				stereotype 	"Business Entity"))
 			logical_presentations 	(list unit_reference_list))
 		    (object Class_Category "Trabajadores"

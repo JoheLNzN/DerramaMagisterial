@@ -174,7 +174,32 @@
 				origin_x   	0
 				origin_y   	0
 				items      	(list diagram_item_list
-				    (object ClassView "Class" "Use Case View::Use-Case Model::Actors::Docente" @1
+				    (object UseCaseView "Use Case View::Use-Case Model::Actors::Solicita crédito" @1
+					location   	(1184, 400)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@1
+					    location   	(1183, 575)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	879
+					    justify    	0
+					    label      	"Solicita crédito")
+					icon       	"Business Use Case"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC038E90153"
+					width      	306)
+				    (object ClassView "Class" "Use Case View::Use-Case Model::Actors::Docente" @2
 					ShowCompartmentStereotypes 	TRUE
 					SuppressAttribute 	TRUE
 					SuppressOperation 	TRUE
@@ -191,7 +216,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@1
+					    Parent_View 	@2
 					    location   	(463, 848)
 					    anchor_loc 	1
 					    nlines     	2
@@ -206,31 +231,6 @@
 					width      	202
 					annotation 	8
 					autoResize 	TRUE)
-				    (object UseCaseView "Use Case View::Use-Case Model::Actors::Solicita crédito" @2
-					location   	(1184, 400)
-					font       	(object Font
-					    size       	9
-					    face       	"Arial"
-					    bold       	FALSE
-					    italics    	FALSE
-					    underline  	FALSE
-					    strike     	FALSE
-					    color      	0
-					    default_color 	TRUE)
-					label      	(object ItemLabel
-					    Parent_View 	@2
-					    location   	(1183, 575)
-					    anchor_loc 	1
-					    nlines     	2
-					    max_width  	879
-					    justify    	0
-					    label      	"Solicita crédito")
-					icon       	"Business Use Case"
-					icon_style 	"Icon"
-					line_color 	3342489
-					fill_color 	13434879
-					quidu      	"5AC038E90153"
-					width      	306)
 				    (object AssociationViewNew "$UNNAMED$0" @3
 					location   	(797, 525)
 					font       	(object Font
@@ -253,10 +253,10 @@
 						line_color 	3342489
 						quidu      	"5AC038EC0347"
 						client     	@3
-						supplier   	@2
+						supplier   	@1
 						vertices   	(list Points
 						    (797, 525)
-						    (1032, 448))
+						    (862, 503))
 						line_style 	0)
 					    (object RoleView "$UNNAMED$2" @5
 						Parent_View 	@3
@@ -265,10 +265,10 @@
 						line_color 	3342489
 						quidu      	"5AC038EC0349"
 						client     	@3
-						supplier   	@1
+						supplier   	@2
 						vertices   	(list Points
 						    (797, 525)
-						    (562, 603))
+						    (562, 602))
 						line_style 	0)))))))
 		    (object Class_Category "Use Cases"
 			quid       	"34E37E430280"
@@ -472,7 +472,7 @@
 								supplier   	@8
 								vertices   	(list Points
 								    (762, 1024)
-								    (978, 1024))
+								    (977, 1024))
 								line_style 	0)
 							    (object RoleView "" @13
 								Parent_View 	@10
@@ -807,7 +807,7 @@
 					supplier   	@18
 					vertices   	(list Points
 					    (889, 976)
-					    (1152, 976))
+					    (1154, 976))
 					line_style 	0))))))))
 	logical_presentations 	(list unit_reference_list
 	    (object UseCaseDiagram "Main"
@@ -939,18 +939,6 @@
 		stereotype 	"Business Analysis Model"
 		exportControl 	"Public"
 		logical_models 	(list unit_reference_list
-		    (object Class "Cajero"
-			quid       	"5AC0173D007C"
-			stereotype 	"Business Worker")
-		    (object Class "Supervisor de caja"
-			quid       	"5AC0174100B7"
-			stereotype 	"Business Worker")
-		    (object Class "Sectorista de crédito"
-			quid       	"5AC01B3A006D"
-			stereotype 	"Business Worker")
-		    (object Class "Auxiliar de crédito"
-			quid       	"5AC01B70004D"
-			stereotype 	"Business Worker")
 		    (object UseCase "Registra condiciones"
 			quid       	"5AC015D603CA"
 			stereotype 	"Business Use Case")
@@ -1002,6 +990,18 @@
 				stereotype 	"Business Worker")
 			    (object Class "Promotor"
 				quid       	"5AC0154E01C1"
+				stereotype 	"Business Worker")
+			    (object Class "Auxiliar de crédito"
+				quid       	"5AC01B70004D"
+				stereotype 	"Business Worker")
+			    (object Class "Cajero"
+				quid       	"5AC0173D007C"
+				stereotype 	"Business Worker")
+			    (object Class "Sectorista de crédito"
+				quid       	"5AC01B3A006D"
+				stereotype 	"Business Worker")
+			    (object Class "Supervisor de caja"
+				quid       	"5AC0174100B7"
 				stereotype 	"Business Worker"))
 			logical_presentations 	(list unit_reference_list)))
 		logical_presentations 	(list unit_reference_list
@@ -1138,7 +1138,7 @@
 				fill_color 	13434879
 				quidu      	"5AC015D603CA"
 				width      	306)
-			    (object ClassView "Class" "Logical View::Business Object Model::Cajero" @34
+			    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Cajero" @34
 				ShowCompartmentStereotypes 	TRUE
 				SuppressAttribute 	TRUE
 				SuppressOperation 	TRUE
@@ -1171,7 +1171,7 @@
 				height     	290
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Business Object Model::Supervisor de caja" @35
+			    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Supervisor de caja" @35
 				ShowCompartmentStereotypes 	TRUE
 				SuppressAttribute 	TRUE
 				SuppressOperation 	TRUE
@@ -1260,7 +1260,7 @@
 				quidu      	"5AC01828031F"
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Business Object Model::Sectorista de crédito" @38
+			    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Sectorista de crédito" @38
 				ShowCompartmentStereotypes 	TRUE
 				SuppressAttribute 	TRUE
 				SuppressOperation 	TRUE
@@ -1293,7 +1293,7 @@
 				height     	290
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Business Object Model::Auxiliar de crédito" @39
+			    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Auxiliar de crédito" @39
 				ShowCompartmentStereotypes 	TRUE
 				SuppressAttribute 	TRUE
 				SuppressOperation 	TRUE
