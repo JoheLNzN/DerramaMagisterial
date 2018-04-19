@@ -95,49 +95,73 @@
 		stereotype 	"Business Use Case Model"
 		exportControl 	"Public"
 		logical_models 	(list unit_reference_list
-		    (object UseCase "CUN01 - Gestión Comercial"
+		    (object UseCase "CUN01 - Captar asociados"
 			quid       	"5AC2D866033C"
 			stereotype 	"Business Use Case")
-		    (object UseCase "CUN02 - Otorgamiento de Crédito"
+		    (object UseCase "CUN02 - Solicitar crédito"
 			quid       	"5AC2D8A80173"
 			stereotype 	"Business Use Case")
-		    (object UseCase "CUN03 - Desembolso de Crédito"
+		    (object UseCase "CUN03 - Solicitar desembolso de crédito"
 			quid       	"5AC2D8BB034A"
 			stereotype 	"Business Use Case")
 		    (object Association "$UNNAMED$0"
-			quid       	"5AC2D97C01D2"
+			quid       	"5AD838E903B4"
 			roles      	(list role_list
 			    (object Role "$UNNAMED$1"
-				quid       	"5AC2D97D0072"
-				supplier   	"Use Case View::Business Use-Case Model::CUN01 - Gestión Comercial"
+				quid       	"5AD838EA02BB"
+				supplier   	"Use Case View::Business Use-Case Model::CUN01 - Captar asociados"
 				quidu      	"5AC2D866033C"
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$2"
-				quid       	"5AC2D97D0074"
-				supplier   	"Use Case View::Business Use-Case Model::Actor::Docente"
-				quidu      	"5AC013B10391")))
+				quid       	"5AD838EA02BD"
+				supplier   	"Logical View::Business Object Model::Trabajadores::Supervisor de crédito"
+				quidu      	"5AC0147C0252")))
 		    (object Association "$UNNAMED$3"
-			quid       	"5AC2D97E037F"
+			quid       	"5AD8390701EE"
 			roles      	(list role_list
 			    (object Role "$UNNAMED$4"
-				quid       	"5AC2D97F011E"
-				supplier   	"Use Case View::Business Use-Case Model::CUN02 - Otorgamiento de Crédito"
+				quid       	"5AD839080038"
+				supplier   	"Use Case View::Business Use-Case Model::CUN02 - Solicitar crédito"
 				quidu      	"5AC2D8A80173"
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$5"
-				quid       	"5AC2D97F0120"
-				supplier   	"Use Case View::Business Use-Case Model::Actor::Docente"
-				quidu      	"5AC013B10391")))
+				quid       	"5AD83908003A"
+				supplier   	"Logical View::Business Object Model::Trabajadores::Auxiliar de crédito"
+				quidu      	"5AC01B70004D")))
 		    (object Association "$UNNAMED$6"
-			quid       	"5AC2D98003AE"
+			quid       	"5AD8391D030E"
 			roles      	(list role_list
 			    (object Role "$UNNAMED$7"
-				quid       	"5AC2D98102C4"
-				supplier   	"Use Case View::Business Use-Case Model::CUN03 - Desembolso de Crédito"
+				quid       	"5AD8391E00E3"
+				supplier   	"Use Case View::Business Use-Case Model::CUN03 - Solicitar desembolso de crédito"
 				quidu      	"5AC2D8BB034A"
 				is_navigable 	TRUE)
 			    (object Role "$UNNAMED$8"
-				quid       	"5AC2D98102C6"
+				quid       	"5AD8391E00E5"
+				supplier   	"Logical View::Business Object Model::Trabajadores::Auxiliar de caja"
+				quidu      	"5AC3237F0273")))
+		    (object Association "$UNNAMED$9"
+			quid       	"5AD839870138"
+			roles      	(list role_list
+			    (object Role "$UNNAMED$10"
+				quid       	"5AD8398703C9"
+				supplier   	"Use Case View::Business Use-Case Model::CUN03 - Solicitar desembolso de crédito"
+				quidu      	"5AC2D8BB034A"
+				is_navigable 	TRUE)
+			    (object Role "$UNNAMED$11"
+				quid       	"5AD8398703CB"
+				supplier   	"Use Case View::Business Use-Case Model::Actor::Docente"
+				quidu      	"5AC013B10391")))
+		    (object Association "$UNNAMED$12"
+			quid       	"5AD83A1B00DD"
+			roles      	(list role_list
+			    (object Role "$UNNAMED$13"
+				quid       	"5AD83A1C02F6"
+				supplier   	"Use Case View::Business Use-Case Model::CUN02 - Solicitar crédito"
+				quidu      	"5AC2D8A80173"
+				is_navigable 	TRUE)
+			    (object Role "$UNNAMED$14"
+				quid       	"5AD83A1C02F8"
 				supplier   	"Use Case View::Business Use-Case Model::Actor::Docente"
 				quidu      	"5AC013B10391")))
 		    (object Class_Category "Actor"
@@ -158,8 +182,13 @@
 			origin_x   	0
 			origin_y   	0
 			items      	(list diagram_item_list
-			    (object UseCaseView "Use Case View::Business Use-Case Model::CUN01 - Gestión Comercial" @1
-				location   	(1200, 224)
+			    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Supervisor de crédito" @1
+				ShowCompartmentStereotypes 	TRUE
+				SuppressAttribute 	TRUE
+				SuppressOperation 	TRUE
+				IncludeAttribute 	TRUE
+				IncludeOperation 	TRUE
+				location   	(544, 256)
 				font       	(object Font
 				    size       	9
 				    face       	"Arial"
@@ -171,20 +200,23 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@1
-				    location   	(1199, 399)
+				    location   	(543, 480)
 				    anchor_loc 	1
 				    nlines     	2
-				    max_width  	879
+				    max_width  	838
 				    justify    	0
-				    label      	"CUN01 - Gestión Comercial")
-				icon       	"Business Use Case"
+				    label      	"Supervisor de crédito")
+				icon       	"Business Worker"
 				icon_style 	"Icon"
 				line_color 	3342489
 				fill_color 	13434879
-				quidu      	"5AC2D866033C"
-				width      	306)
-			    (object UseCaseView "Use Case View::Business Use-Case Model::CUN02 - Otorgamiento de Crédito" @2
-				location   	(1200, 720)
+				quidu      	"5AC0147C0252"
+				width      	292
+				height     	290
+				annotation 	8
+				autoResize 	TRUE)
+			    (object UseCaseView "Use Case View::Business Use-Case Model::CUN01 - Captar asociados" @2
+				location   	(1488, 256)
 				font       	(object Font
 				    size       	9
 				    face       	"Arial"
@@ -196,20 +228,59 @@
 				    default_color 	TRUE)
 				label      	(object ItemLabel
 				    Parent_View 	@2
-				    location   	(1199, 895)
+				    location   	(1487, 431)
 				    anchor_loc 	1
 				    nlines     	2
 				    max_width  	879
 				    justify    	0
-				    label      	"CUN02 - Otorgamiento de Crédito")
+				    label      	"CUN01 - Captar asociados")
 				icon       	"Business Use Case"
 				icon_style 	"Icon"
 				line_color 	3342489
 				fill_color 	13434879
-				quidu      	"5AC2D8A80173"
+				quidu      	"5AC2D866033C"
 				width      	306)
-			    (object UseCaseView "Use Case View::Business Use-Case Model::CUN03 - Desembolso de Crédito" @3
-				location   	(1168, 1264)
+			    (object AssociationViewNew "$UNNAMED$0" @3
+				location   	(1011, 256)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5AD838E903B4"
+				roleview_list 	(list RoleViews
+				    (object RoleView "$UNNAMED$1" @4
+					Parent_View 	@3
+					location   	(595, -112)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"5AD838EA02BB"
+					client     	@3
+					supplier   	@2
+					vertices   	(list Points
+					    (1011, 256)
+					    (1335, 256))
+					line_style 	0)
+				    (object RoleView "$UNNAMED$2" @5
+					Parent_View 	@3
+					location   	(595, -112)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"5AD838EA02BD"
+					client     	@3
+					supplier   	@1
+					vertices   	(list Points
+					    (1011, 256)
+					    (687, 256))
+					line_style 	0)))
+			    (object UseCaseView "Use Case View::Business Use-Case Model::CUN03 - Solicitar desembolso de crédito" @6
+				location   	(1472, 1440)
 				font       	(object Font
 				    size       	9
 				    face       	"Arial"
@@ -220,24 +291,24 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@3
-				    location   	(1167, 1439)
+				    Parent_View 	@6
+				    location   	(1471, 1615)
 				    anchor_loc 	1
 				    nlines     	2
 				    max_width  	879
 				    justify    	0
-				    label      	"CUN03 - Desembolso de Crédito")
+				    label      	"CUN03 - Solicitar desembolso de crédito")
 				icon       	"Business Use Case"
 				icon_style 	"Icon"
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"5AC2D8BB034A"
 				width      	306)
-			    (object ClassView "Class" "Use Case View::Business Use-Case Model::Actor::Docente" @4
+			    (object ClassView "Class" "Use Case View::Business Use-Case Model::Actor::Docente" @7
 				ShowCompartmentStereotypes 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(368, 720)
+				location   	(544, 864)
 				font       	(object Font
 				    size       	9
 				    face       	"Arial"
@@ -248,23 +319,23 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@4
-				    location   	(368, 949)
+				    Parent_View 	@7
+				    location   	(544, 1115)
 				    anchor_loc 	1
-				    nlines     	2
-				    max_width  	325
+				    nlines     	1
+				    max_width  	331
 				    justify    	0
 				    label      	"Docente")
 				icon       	"Actor"
 				icon_style 	"Icon"
 				line_color 	3342489
 				quidu      	"5AC013B10391"
-				width      	219
-				height     	300
+				width      	243
+				height     	344
 				annotation 	8
 				autoResize 	TRUE)
-			    (object AssociationViewNew "$UNNAMED$0" @5
-				location   	(714, 509)
+			    (object AssociationViewNew "$UNNAMED$9" @8
+				location   	(988, 1138)
 				font       	(object Font
 				    size       	9
 				    face       	"Arial"
@@ -276,73 +347,59 @@
 				    default_color 	TRUE)
 				stereotype 	TRUE
 				line_color 	3342489
-				quidu      	"5AC2D97C01D2"
+				quidu      	"5AD839870138"
 				roleview_list 	(list RoleViews
-				    (object RoleView "$UNNAMED$1" @6
-					Parent_View 	@5
-					location   	(170, -275)
-					stereotype 	TRUE
-					line_color 	3342489
-					quidu      	"5AC2D97D0072"
-					client     	@5
-					supplier   	@1
-					vertices   	(list Points
-					    (714, 509)
-					    (959, 366))
-					line_style 	0)
-				    (object RoleView "$UNNAMED$2" @7
-					Parent_View 	@5
-					location   	(170, -275)
-					stereotype 	TRUE
-					line_color 	3342489
-					quidu      	"5AC2D97D0074"
-					client     	@5
-					supplier   	@4
-					vertices   	(list Points
-					    (714, 509)
-					    (470, 653))
-					line_style 	0)))
-			    (object AssociationViewNew "$UNNAMED$3" @8
-				location   	(759, 720)
-				font       	(object Font
-				    size       	9
-				    face       	"Arial"
-				    bold       	FALSE
-				    italics    	FALSE
-				    underline  	FALSE
-				    strike     	FALSE
-				    color      	0
-				    default_color 	TRUE)
-				stereotype 	TRUE
-				line_color 	3342489
-				quidu      	"5AC2D97E037F"
-				roleview_list 	(list RoleViews
-				    (object RoleView "$UNNAMED$4" @9
+				    (object RoleView "$UNNAMED$10" @9
 					Parent_View 	@8
-					location   	(215, -64)
+					location   	(-1540, 338)
 					stereotype 	TRUE
 					line_color 	3342489
-					quidu      	"5AC2D97F011E"
+					quidu      	"5AD8398703C9"
 					client     	@8
-					supplier   	@2
+					supplier   	@6
 					vertices   	(list Points
-					    (759, 720)
-					    (1048, 720))
+					    (988, 1138)
+					    (1320, 1346))
 					line_style 	0)
-				    (object RoleView "$UNNAMED$5" @10
+				    (object RoleView "$UNNAMED$11" @10
 					Parent_View 	@8
-					location   	(215, -64)
+					location   	(-1540, 338)
 					stereotype 	TRUE
 					line_color 	3342489
-					quidu      	"5AC2D97F0120"
+					quidu      	"5AD8398703CB"
 					client     	@8
-					supplier   	@4
+					supplier   	@7
 					vertices   	(list Points
-					    (759, 720)
-					    (470, 720))
+					    (988, 1138)
+					    (657, 931))
 					line_style 	0)))
-			    (object AssociationViewNew "$UNNAMED$6" @11
-				location   	(750, 978)
+			    (object UseCaseView "Use Case View::Business Use-Case Model::CUN02 - Solicitar crédito" @11
+				location   	(1504, 864)
+				font       	(object Font
+				    size       	9
+				    face       	"Arial"
+				    bold       	FALSE
+				    italics    	FALSE
+				    underline  	FALSE
+				    strike     	FALSE
+				    color      	0
+				    default_color 	TRUE)
+				label      	(object ItemLabel
+				    Parent_View 	@11
+				    location   	(1503, 1039)
+				    anchor_loc 	1
+				    nlines     	2
+				    max_width  	879
+				    justify    	0
+				    label      	"CUN02 - Solicitar crédito")
+				icon       	"Business Use Case"
+				icon_style 	"Icon"
+				line_color 	3342489
+				fill_color 	13434879
+				quidu      	"5AC2D8A80173"
+				width      	306)
+			    (object AssociationViewNew "$UNNAMED$12" @12
+				location   	(1004, 864)
 				font       	(object Font
 				    size       	9
 				    face       	"Arial"
@@ -354,31 +411,31 @@
 				    default_color 	TRUE)
 				stereotype 	TRUE
 				line_color 	3342489
-				quidu      	"5AC2D98003AE"
+				quidu      	"5AD83A1B00DD"
 				roleview_list 	(list RoleViews
-				    (object RoleView "$UNNAMED$7" @12
-					Parent_View 	@11
-					location   	(206, 194)
+				    (object RoleView "$UNNAMED$13" @13
+					Parent_View 	@12
+					location   	(476, -16)
 					stereotype 	TRUE
 					line_color 	3342489
-					quidu      	"5AC2D98102C4"
-					client     	@11
-					supplier   	@3
+					quidu      	"5AD83A1C02F6"
+					client     	@12
+					supplier   	@11
 					vertices   	(list Points
-					    (750, 978)
-					    (1030, 1169))
+					    (1004, 864)
+					    (1352, 864))
 					line_style 	0)
-				    (object RoleView "$UNNAMED$8" @13
-					Parent_View 	@11
-					location   	(206, 194)
+				    (object RoleView "$UNNAMED$14" @14
+					Parent_View 	@12
+					location   	(476, -16)
 					stereotype 	TRUE
 					line_color 	3342489
-					quidu      	"5AC2D98102C6"
-					client     	@11
-					supplier   	@4
+					quidu      	"5AD83A1C02F8"
+					client     	@12
+					supplier   	@7
 					vertices   	(list Points
-					    (750, 978)
-					    (470, 788))
+					    (1004, 864)
+					    (657, 864))
 					line_style 	0)))))))
 	    (object Class_Category "Use-Case Model"
 		quid       	"35B677F4010E"
@@ -406,137 +463,8 @@
 |If different individuals are responsible for different actors and their related artifacts, the actors should be organized into their own packages and placed under separate configuration control.
 			
 			exportControl 	"Public"
-			logical_models 	(list unit_reference_list
-			    (object Class "Docente"
-				quid       	"353D5816026C"
-				documentation 	
-|<<The brief description of the actor is entered here.  For guidance on what should go in this description, see the following Rational Unified Process references:
-|
-|- Activity: Find Actors and Use Cases
-|- Guidelines: Actor>>
-				
-				stereotype 	"Business Actor")
-			    (object UseCase "Solicita crédito"
-				quid       	"5AC038E90153"
-				stereotype 	"Business Use Case")
-			    (object Association "$UNNAMED$9"
-				quid       	"5AC038EC010E"
-				roles      	(list role_list
-				    (object Role "$UNNAMED$10"
-					quid       	"5AC038EC0347"
-					supplier   	"Use Case View::Use-Case Model::Actors::Solicita crédito"
-					quidu      	"5AC038E90153"
-					is_navigable 	TRUE)
-				    (object Role "$UNNAMED$11"
-					quid       	"5AC038EC0349"
-					supplier   	"Use Case View::Use-Case Model::Actors::Docente"
-					quidu      	"353D5816026C"))))
-			logical_presentations 	(list unit_reference_list
-			    (object UseCaseDiagram "Diagrama de Caso de Uso"
-				quid       	"5AC038DA0297"
-				title      	"Diagrama de Caso de Uso"
-				zoom       	100
-				max_height 	28350
-				max_width  	21600
-				origin_x   	0
-				origin_y   	0
-				items      	(list diagram_item_list
-				    (object UseCaseView "Use Case View::Use-Case Model::Actors::Solicita crédito" @14
-					location   	(1184, 400)
-					font       	(object Font
-					    size       	9
-					    face       	"Arial"
-					    bold       	FALSE
-					    italics    	FALSE
-					    underline  	FALSE
-					    strike     	FALSE
-					    color      	0
-					    default_color 	TRUE)
-					label      	(object ItemLabel
-					    Parent_View 	@14
-					    location   	(1183, 575)
-					    anchor_loc 	1
-					    nlines     	2
-					    max_width  	879
-					    justify    	0
-					    label      	"Solicita crédito")
-					icon       	"Business Use Case"
-					icon_style 	"Icon"
-					line_color 	3342489
-					fill_color 	13434879
-					quidu      	"5AC038E90153"
-					width      	306)
-				    (object ClassView "Class" "Use Case View::Use-Case Model::Actors::Docente" @15
-					ShowCompartmentStereotypes 	TRUE
-					SuppressAttribute 	TRUE
-					SuppressOperation 	TRUE
-					IncludeAttribute 	TRUE
-					IncludeOperation 	TRUE
-					location   	(464, 640)
-					font       	(object Font
-					    size       	9
-					    face       	"Arial"
-					    bold       	FALSE
-					    italics    	FALSE
-					    underline  	FALSE
-					    strike     	FALSE
-					    color      	0
-					    default_color 	TRUE)
-					label      	(object ItemLabel
-					    Parent_View 	@15
-					    location   	(463, 848)
-					    anchor_loc 	1
-					    nlines     	2
-					    max_width  	583
-					    justify    	0
-					    label      	"Docente")
-					icon       	"Business Actor"
-					icon_style 	"Icon"
-					line_color 	3342489
-					fill_color 	13434879
-					quidu      	"353D5816026C"
-					width      	202
-					annotation 	8
-					autoResize 	TRUE)
-				    (object AssociationViewNew "$UNNAMED$9" @16
-					location   	(797, 525)
-					font       	(object Font
-					    size       	9
-					    face       	"Arial"
-					    bold       	FALSE
-					    italics    	FALSE
-					    underline  	FALSE
-					    strike     	FALSE
-					    color      	0
-					    default_color 	TRUE)
-					stereotype 	TRUE
-					line_color 	3342489
-					quidu      	"5AC038EC010E"
-					roleview_list 	(list RoleViews
-					    (object RoleView "$UNNAMED$10" @17
-						Parent_View 	@16
-						location   	(173, -19)
-						stereotype 	TRUE
-						line_color 	3342489
-						quidu      	"5AC038EC0347"
-						client     	@16
-						supplier   	@14
-						vertices   	(list Points
-						    (797, 525)
-						    (862, 503))
-						line_style 	0)
-					    (object RoleView "$UNNAMED$11" @18
-						Parent_View 	@16
-						location   	(173, -19)
-						stereotype 	TRUE
-						line_color 	3342489
-						quidu      	"5AC038EC0349"
-						client     	@16
-						supplier   	@15
-						vertices   	(list Points
-						    (797, 525)
-						    (562, 602))
-						line_style 	0)))))))
+			logical_models 	(list unit_reference_list)
+			logical_presentations 	(list unit_reference_list))
 		    (object Class_Category "Use Cases"
 			quid       	"34E37E430280"
 			documentation 	
@@ -577,7 +505,7 @@
 						origin_x   	0
 						origin_y   	0
 						items      	(list diagram_item_list
-						    (object NoteView @19
+						    (object NoteView @15
 							location   	(480, 400)
 							font       	(object Font
 							    size       	9
@@ -589,7 +517,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@19
+							    Parent_View 	@15
 							    location   	(33, 35)
 							    fill_color 	13434879
 							    nlines     	15
@@ -610,7 +538,7 @@
 							fill_color 	13434879
 							width      	919
 							height     	743)
-						    (object NoteView @20
+						    (object NoteView @16
 							location   	(1344, 160)
 							font       	(object Font
 							    size       	9
@@ -622,7 +550,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@20
+							    Parent_View 	@16
 							    location   	(1006, 29)
 							    fill_color 	13434879
 							    nlines     	5
@@ -639,7 +567,7 @@
 							fill_color 	13434879
 							width      	700
 							height     	275)
-						    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::<Use Case Name>::<Use Case Name>" @21
+						    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::<Use Case Name>::<Use Case Name>" @17
 							location   	(1088, 1024)
 							font       	(object Font
 							    size       	9
@@ -651,7 +579,7 @@
 							    color      	0
 							    default_color 	TRUE)
 							label      	(object ItemLabel
-							    Parent_View 	@21
+							    Parent_View 	@17
 							    location   	(1088, 1162)
 							    anchor_loc 	1
 							    nlines     	2
@@ -662,110 +590,7 @@
 							line_color 	3342489
 							fill_color 	13434879
 							quidu      	"34E37FB203D4"
-							autoResize 	TRUE)
-						    (object ClassView "Class" "Use Case View::Use-Case Model::Actors::Docente" @22
-							ShowCompartmentStereotypes 	TRUE
-							SuppressAttribute 	TRUE
-							SuppressOperation 	TRUE
-							IncludeAttribute 	TRUE
-							IncludeOperation 	TRUE
-							location   	(448, 1024)
-							font       	(object Font
-							    size       	9
-							    face       	"Arial"
-							    bold       	FALSE
-							    italics    	FALSE
-							    underline  	FALSE
-							    strike     	FALSE
-							    color      	0
-							    default_color 	TRUE)
-							label      	(object ItemLabel
-							    Parent_View 	@22
-							    location   	(447, 1232)
-							    anchor_loc 	1
-							    nlines     	2
-							    max_width  	570
-							    justify    	0
-							    label      	"Docente")
-							icon       	"Business Actor"
-							icon_style 	"Icon"
-							line_color 	3342489
-							quidu      	"353D5816026C"
-							width      	202
-							annotation 	8
-							autoResize 	TRUE)
-						    (object AssociationViewNew "" @23
-							location   	(762, 1024)
-							font       	(object Font
-							    size       	9
-							    face       	"Arial"
-							    bold       	FALSE
-							    italics    	FALSE
-							    underline  	FALSE
-							    strike     	FALSE
-							    color      	0
-							    default_color 	TRUE)
-							stereotype 	(object SegLabel @24
-							    Parent_View 	@23
-							    location   	(762, 1060)
-							    font       	(object Font
-								size       	9
-								face       	"Arial"
-								bold       	FALSE
-								italics    	FALSE
-								underline  	FALSE
-								strike     	FALSE
-								color      	0
-								default_color 	TRUE)
-							    anchor     	10
-							    anchor_loc 	1
-							    nlines     	1
-							    max_width  	450
-							    justify    	0
-							    label      	"<<communicate>>"
-							    pctDist    	0.500000
-							    height     	36
-							    orientation 	1)
-							line_color 	3342489
-							quidu      	"35C0ED3A00F0"
-							roleview_list 	(list RoleViews
-							    (object RoleView "" @25
-								Parent_View 	@23
-								location   	(522, -160)
-								stereotype 	TRUE
-								line_color 	3342489
-								quidu      	"35C0ED3B0118"
-								client     	@23
-								supplier   	@21
-								vertices   	(list Points
-								    (762, 1024)
-								    (977, 1024))
-								line_style 	0)
-							    (object RoleView "" @26
-								Parent_View 	@23
-								location   	(522, -160)
-								stereotype 	TRUE
-								line_color 	3342489
-								quidu      	"35C0ED3B0119"
-								client     	@23
-								supplier   	@22
-								vertices   	(list Points
-								    (762, 1024)
-								    (546, 1024))
-								line_style 	0)))))))
-				    (object Association "$UNNAMED$12"
-					quid       	"35C0ED3A00F0"
-					stereotype 	"communicate"
-					roles      	(list role_list
-					    (object Role "$UNNAMED$13"
-						quid       	"35C0ED3B0118"
-						supplier   	"Use Case View::Use-Case Model::Use Cases::<Use Case Name>::<Use Case Name>"
-						quidu      	"34E37FB203D4"
-						is_navigable 	TRUE)
-					    (object Role "$UNNAMED$14"
-						quid       	"35C0ED3B0119"
-						supplier   	"Use Case View::Use-Case Model::Actors::Docente"
-						quidu      	"353D5816026C"))))
+							autoResize 	TRUE))))))
 				logical_presentations 	(list unit_reference_list))
 			    (object Class_Category "Included Use Cases"
 				quid       	"35C0E0BB0366"
@@ -794,7 +619,7 @@
 				origin_x   	0
 				origin_y   	0
 				items      	(list diagram_item_list
-				    (object NoteView @27
+				    (object NoteView @18
 					location   	(432, 384)
 					font       	(object Font
 					    size       	9
@@ -806,7 +631,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@27
+					    Parent_View 	@18
 					    location   	(44, 28)
 					    fill_color 	13434879
 					    nlines     	15
@@ -827,7 +652,7 @@
 					fill_color 	13434879
 					width      	800
 					height     	725)
-				    (object NoteView @28
+				    (object NoteView @19
 					location   	(1216, 160)
 					font       	(object Font
 					    size       	9
@@ -839,7 +664,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@28
+					    Parent_View 	@19
 					    location   	(878, 29)
 					    fill_color 	13434879
 					    nlines     	5
@@ -867,7 +692,7 @@
 			origin_x   	0
 			origin_y   	0
 			items      	(list diagram_item_list
-			    (object NoteView @29
+			    (object NoteView @20
 				location   	(448, 304)
 				font       	(object Font
 				    size       	9
@@ -879,7 +704,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@29
+				    Parent_View 	@20
 				    location   	(38, 23)
 				    fill_color 	13434879
 				    nlines     	12
@@ -900,38 +725,7 @@
 				fill_color 	13434879
 				width      	844
 				height     	574)
-			    (object ClassView "Class" "Use Case View::Use-Case Model::Actors::Docente" @30
-				ShowCompartmentStereotypes 	TRUE
-				SuppressAttribute 	TRUE
-				SuppressOperation 	TRUE
-				IncludeAttribute 	TRUE
-				IncludeOperation 	TRUE
-				location   	(528, 976)
-				font       	(object Font
-				    size       	9
-				    face       	"Arial"
-				    bold       	FALSE
-				    italics    	FALSE
-				    underline  	FALSE
-				    strike     	FALSE
-				    color      	0
-				    default_color 	TRUE)
-				label      	(object ItemLabel
-				    Parent_View 	@30
-				    location   	(527, 1184)
-				    anchor_loc 	1
-				    nlines     	2
-				    max_width  	577
-				    justify    	0
-				    label      	"Docente")
-				icon       	"Business Actor"
-				icon_style 	"Icon"
-				line_color 	3342489
-				quidu      	"353D5816026C"
-				width      	202
-				annotation 	8
-				autoResize 	TRUE)
-			    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::<Use Case Name>::<Use Case Name>" @31
+			    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::<Use Case Name>::<Use Case Name>" @21
 				location   	(1264, 976)
 				font       	(object Font
 				    size       	9
@@ -943,7 +737,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@31
+				    Parent_View 	@21
 				    location   	(1264, 1114)
 				    anchor_loc 	1
 				    nlines     	2
@@ -954,128 +748,7 @@
 				line_color 	3342489
 				fill_color 	13434879
 				quidu      	"34E37FB203D4"
-				autoResize 	TRUE)
-			    (object AssociationViewNew "$UNNAMED$12" @32
-				location   	(889, 976)
-				font       	(object Font
-				    size       	9
-				    face       	"Arial"
-				    bold       	FALSE
-				    italics    	FALSE
-				    underline  	FALSE
-				    strike     	FALSE
-				    color      	0
-				    default_color 	TRUE)
-				stereotype 	(object SegLabel @33
-				    Parent_View 	@32
-				    location   	(907, 1013)
-				    font       	(object Font
-					size       	9
-					face       	"Arial"
-					bold       	FALSE
-					italics    	FALSE
-					underline  	FALSE
-					strike     	FALSE
-					color      	0
-					default_color 	TRUE)
-				    anchor     	10
-				    anchor_loc 	1
-				    nlines     	1
-				    max_width  	450
-				    justify    	0
-				    label      	"<<communicate>>"
-				    pctDist    	0.800000
-				    height     	37
-				    orientation 	1)
-				line_color 	3342489
-				quidu      	"35C0ED3A00F0"
-				roleview_list 	(list RoleViews
-				    (object RoleView "$UNNAMED$14" @34
-					Parent_View 	@32
-					location   	(-263, 48)
-					font       	(object Font
-					    size       	9
-					    face       	"Arial"
-					    bold       	FALSE
-					    italics    	FALSE
-					    underline  	FALSE
-					    strike     	FALSE
-					    color      	0
-					    default_color 	TRUE)
-					label      	(object SegLabel @35
-					    Parent_View 	@34
-					    location   	(680, 935)
-					    font       	(object Font
-						size       	9
-						face       	"Arial"
-						bold       	FALSE
-						italics    	FALSE
-						underline  	FALSE
-						strike     	FALSE
-						color      	0
-						default_color 	TRUE)
-					    hidden     	TRUE
-					    anchor     	1
-					    anchor_loc 	1
-					    nlines     	1
-					    max_width  	450
-					    justify    	0
-					    label      	""
-					    pctDist    	0.800000
-					    height     	42
-					    orientation 	1)
-					stereotype 	TRUE
-					line_color 	3342489
-					quidu      	"35C0ED3B0119"
-					client     	@32
-					supplier   	@30
-					vertices   	(list Points
-					    (889, 976)
-					    (626, 976))
-					line_style 	0)
-				    (object RoleView "$UNNAMED$13" @36
-					Parent_View 	@32
-					location   	(-263, 48)
-					font       	(object Font
-					    size       	9
-					    face       	"Arial"
-					    bold       	FALSE
-					    italics    	FALSE
-					    underline  	FALSE
-					    strike     	FALSE
-					    color      	0
-					    default_color 	TRUE)
-					label      	(object SegLabel @37
-					    Parent_View 	@36
-					    location   	(1098, 935)
-					    font       	(object Font
-						size       	9
-						face       	"Arial"
-						bold       	FALSE
-						italics    	FALSE
-						underline  	FALSE
-						strike     	FALSE
-						color      	0
-						default_color 	TRUE)
-					    hidden     	TRUE
-					    anchor     	1
-					    anchor_loc 	1
-					    nlines     	1
-					    max_width  	450
-					    justify    	0
-					    label      	""
-					    pctDist    	0.800000
-					    height     	42
-					    orientation 	0)
-					stereotype 	TRUE
-					line_color 	3342489
-					quidu      	"35C0ED3B0118"
-					client     	@32
-					supplier   	@31
-					vertices   	(list Points
-					    (889, 976)
-					    (1154, 976))
-					line_style 	0))))))))
+				autoResize 	TRUE))))))
 	logical_presentations 	(list unit_reference_list
 	    (object UseCaseDiagram "Main"
 		quid       	"35C6339B029F"
@@ -1089,7 +762,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object CategoryView "Use Case View::Use-Case Model" @38
+		    (object CategoryView "Use Case View::Use-Case Model" @22
 			location   	(384, 880)
 			font       	(object Font
 			    size       	10
@@ -1101,7 +774,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@38
+			    Parent_View 	@22
 			    location   	(189, 779)
 			    fill_color 	13434879
 			    nlines     	2
@@ -1114,7 +787,7 @@
 			quidu      	"35B677F4010E"
 			width      	402
 			height     	215)
-		    (object NoteView @39
+		    (object NoteView @23
 			location   	(1040, 560)
 			font       	(object Font
 			    size       	10
@@ -1126,7 +799,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@39
+			    Parent_View 	@23
 			    location   	(813, 358)
 			    fill_color 	13434879
 			    nlines     	9
@@ -1137,7 +810,7 @@
 			fill_color 	13434879
 			width      	479
 			height     	416)
-		    (object CategoryView "Use Case View::Business Use-Case Model" @40
+		    (object CategoryView "Use Case View::Business Use-Case Model" @24
 			location   	(384, 320)
 			font       	(object Font
 			    size       	9
@@ -1149,7 +822,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@40
+			    Parent_View 	@24
 			    location   	(383, 539)
 			    anchor_loc 	1
 			    nlines     	2
@@ -1163,21 +836,21 @@
 			quidu      	"35B677D701B8"
 			width      	389
 			height     	288)
-		    (object ImportView "" @41
+		    (object ImportView "" @25
 			stereotype 	TRUE
 			line_color 	3342489
 			quidu      	"35C633DA030C"
-			client     	@38
-			supplier   	@40
+			client     	@22
+			supplier   	@24
 			vertices   	(list Points
 			    (384, 718)
 			    (384, 563))
 			line_style 	0)
-		    (object AttachView "" @42
+		    (object AttachView "" @26
 			stereotype 	TRUE
 			line_color 	3342489
-			client     	@41
-			supplier   	@39
+			client     	@25
+			supplier   	@23
 			vertices   	(list Points
 			    (384, 653)
 			    (800, 592))
@@ -1208,27 +881,252 @@
 		logical_models 	(list unit_reference_list
 		    (object Class_Category "Entidades"
 			quid       	"5AC01197039D"
+			stereotype 	"Business Analysis Model"
 			exportControl 	"Public"
 			logical_models 	(list unit_reference_list
-			    (object Class "E01-Hoja de ruta"
+			    (object Class "E03 - Hoja de ruta"
 				quid       	"5AC01828031F"
 				stereotype 	"Business Entity"
 				class_attributes 	(list class_attribute_list
 				    (object ClassAttribute "id_hojaruta"
 					quid       	"5AC018410291"
 					type       	"Integer")))
-			    (object Class "E02-Solicitud de crédito"
+			    (object Class "E04 - Solicitud de crédito"
 				quid       	"5AC036EA036B"
-				stereotype 	"Business Entity")
-			    (object Class "E03-Cheque"
+				stereotype 	"Business Entity"
+				superclasses 	(list inheritance_relationship_list
+				    (object Inheritance_Relationship
+					quid       	"5AC6A36C0145"
+					supplier   	"Logical View::Business Object Model::Trabajadores::Auxiliar de crédito"
+					quidu      	"5AC01B70004D"))
+				class_attributes 	(list class_attribute_list
+				    (object ClassAttribute "id_solicitud"
+					quid       	"5AC6A7C800FF"
+					type       	"Integer")
+				    (object ClassAttribute "fecha_solicitud"
+					quid       	"5AC6A7ED00FB"
+					type       	"Date")
+				    (object ClassAttribute "id_docente"
+					quid       	"5AC6A80301B6"
+					type       	"Integer")
+				    (object ClassAttribute "monto_solicitud"
+					quid       	"5AC6A84801D4"
+					type       	"Double")
+				    (object ClassAttribute "id_tipo_desembolso"
+					quid       	"5AC6A86B01AB"
+					type       	"Integer")
+				    (object ClassAttribute "id_gestor"
+					quid       	"5AC6A89E00FC")))
+			    (object Class "E05 - Cheque"
 				quid       	"5AC0379202CA"
 				stereotype 	"Business Entity")
-			    (object Class "E04-Hoja de visita"
+			    (object Class "E02 - Hoja de visita"
 				quid       	"5AC03A02001D"
-				stereotype 	"Business Entity")
-			    (object Class "E05-Lista de pre-aprobados"
+				stereotype 	"Business Entity"
+				class_attributes 	(list class_attribute_list
+				    (object ClassAttribute "id_hojavisita"
+					quid       	"5AC32B6D01E6"
+					type       	"Integer")))
+			    (object Class "E01 - Lista de pre-aprobados"
 				quid       	"5AC03A23034C"
-				stereotype 	"Business Entity"))
+				stereotype 	"Business Entity")
+			    (object Class "E06 - Recibo de Pago Efectivo"
+				quid       	"5AC6A3EA0139"
+				stereotype 	"Business Entity"
+				class_attributes 	(list class_attribute_list
+				    (object ClassAttribute "id_recibo"
+					quid       	"5AC6A9B800ED"
+					type       	"Integer")
+				    (object ClassAttribute "fecha_recibo"
+					quid       	"5AC6A9DB00B5"
+					type       	"Date")
+				    (object ClassAttribute "id_credito"
+					quid       	"5AC6AA0501A1"
+					type       	"Integer")
+				    (object ClassAttribute "monto_pagado"
+					quid       	"5AC6AA1701AD"
+					type       	"Double")
+				    (object ClassAttribute "id_cajero"
+					quid       	"5AC6AA3401F9"
+					type       	"Integer")))
+			    (object Class "E07 - Contrato de Crédito"
+				quid       	"5AC6A49D0344"
+				stereotype 	"Business Entity"
+				class_attributes 	(list class_attribute_list
+				    (object ClassAttribute "id_credito"
+					quid       	"5AC6A8CC02C6"
+					type       	"Integer")
+				    (object ClassAttribute "fecha_credito"
+					quid       	"5AC6A8E20356"
+					type       	"Date")
+				    (object ClassAttribute "id_docente"
+					quid       	"5AC6A8F3034C"
+					type       	"Integer")
+				    (object ClassAttribute "monto_credito"
+					quid       	"5AC6A90A01CE"
+					type       	"Double")
+				    (object ClassAttribute "id_auxiliar"
+					quid       	"5AC6A94500EE"
+					type       	"Integer")
+				    (object ClassAttribute "id_tipo_desembolso"
+					quid       	"5AC6A9810236"
+					type       	"Integer")))
+			    (object Association "Genera"
+				quid       	"5AC69254032F"
+				roles      	(list role_list
+				    (object Role "$UNNAMED$15"
+					quid       	"5AC69255012F"
+					supplier   	"Logical View::Business Object Model::Entidades::E01 - Lista de pre-aprobados"
+					quidu      	"5AC03A23034C"
+					is_navigable 	TRUE)
+				    (object Role "$UNNAMED$16"
+					quid       	"5AC692550132"
+					supplier   	"Logical View::Business Object Model::Trabajadores::Sistema de crédito"
+					quidu      	"5AC0152F0399")))
+			    (object Association "Genera"
+				quid       	"5AC692AC03D1"
+				roles      	(list role_list
+				    (object Role "$UNNAMED$17"
+					quid       	"5AC692AD0395"
+					supplier   	"Logical View::Business Object Model::Entidades::E03 - Hoja de ruta"
+					quidu      	"5AC01828031F"
+					is_navigable 	TRUE)
+				    (object Role "$UNNAMED$18"
+					quid       	"5AC692AD0398"
+					supplier   	"Logical View::Business Object Model::Trabajadores::Promotor"
+					quidu      	"5AC0154E01C1")))
+			    (object Association "Genera"
+				quid       	"5AC692EE01D5"
+				roles      	(list role_list
+				    (object Role "$UNNAMED$19"
+					quid       	"5AC692EE039C"
+					supplier   	"Logical View::Business Object Model::Entidades::E02 - Hoja de visita"
+					quidu      	"5AC03A02001D"
+					is_navigable 	TRUE)
+				    (object Role "$UNNAMED$20"
+					quid       	"5AC692EE039E"
+					supplier   	"Logical View::Business Object Model::Trabajadores::Supervisor de crédito"
+					quidu      	"5AC0147C0252")))
+			    (object Association "Genera"
+				quid       	"5AC69409004F"
+				roles      	(list role_list
+				    (object Role "$UNNAMED$21"
+					quid       	"5AC6940902EE"
+					supplier   	"Logical View::Business Object Model::Entidades::E05 - Cheque"
+					quidu      	"5AC0379202CA"
+					is_navigable 	TRUE)
+				    (object Role "$UNNAMED$22"
+					quid       	"5AC6940902F1"
+					supplier   	"Logical View::Business Object Model::Trabajadores::Supervisor de caja"
+					quidu      	"5AC0174100B7")))
+			    (object Association "Registra"
+				quid       	"5AC6A23200EF"
+				roles      	(list role_list
+				    (object Role "$UNNAMED$23"
+					quid       	"5AC6A233007C"
+					supplier   	"Logical View::Business Object Model::Entidades::E04 - Solicitud de crédito"
+					quidu      	"5AC036EA036B"
+					is_navigable 	TRUE)
+				    (object Role "$UNNAMED$24"
+					quid       	"5AC6A2330080"
+					supplier   	"Logical View::Business Object Model::Trabajadores::Promotor"
+					quidu      	"5AC0154E01C1")))
+			    (object Association "$UNNAMED$25"
+				quid       	"5AC6A3750226"
+				roles      	(list role_list
+				    (object Role "$UNNAMED$26"
+					quid       	"5AC6A3760129"
+					supplier   	"Logical View::Business Object Model::Trabajadores::Auxiliar de crédito"
+					quidu      	"5AC01B70004D"
+					is_navigable 	TRUE)
+				    (object Role "$UNNAMED$27"
+					quid       	"5AC6A3760131"
+					supplier   	"Logical View::Business Object Model::Entidades::E04 - Solicitud de crédito"
+					quidu      	"5AC036EA036B")))
+			    (object Association "Evalua"
+				quid       	"5AC6A38A028C"
+				roles      	(list role_list
+				    (object Role "$UNNAMED$28"
+					quid       	"5AC6A38B0354"
+					supplier   	"Logical View::Business Object Model::Entidades::E04 - Solicitud de crédito"
+					quidu      	"5AC036EA036B"
+					is_navigable 	TRUE)
+				    (object Role "$UNNAMED$29"
+					quid       	"5AC6A38B0359"
+					supplier   	"Logical View::Business Object Model::Trabajadores::Auxiliar de crédito"
+					quidu      	"5AC01B70004D")))
+			    (object Association "$UNNAMED$30"
+				quid       	"5AC6A4290201"
+				roles      	(list role_list
+				    (object Role "$UNNAMED$31"
+					quid       	"5AC6A42A00DF"
+					supplier   	"Logical View::Business Object Model::Entidades::E06 - Recibo de Pago Efectivo"
+					quidu      	"5AC6A3EA0139"
+					is_navigable 	TRUE)
+				    (object Role "$UNNAMED$32"
+					quid       	"5AC6A42A00E1"
+					supplier   	"Logical View::Business Object Model::Trabajadores::Supervisor de caja"
+					quidu      	"5AC0174100B7")))
+			    (object Association "Genera"
+				quid       	"5AC6A4340119"
+				roles      	(list role_list
+				    (object Role "$UNNAMED$33"
+					quid       	"5AC6A4340326"
+					supplier   	"Logical View::Business Object Model::Entidades::E06 - Recibo de Pago Efectivo"
+					quidu      	"5AC6A3EA0139"
+					is_navigable 	TRUE)
+				    (object Role "$UNNAMED$34"
+					quid       	"5AC6A4340329"
+					supplier   	"Logical View::Business Object Model::Trabajadores::Cajero"
+					quidu      	"5AC0173D007C")))
+			    (object Association "Genera"
+				quid       	"5AC6A4BE0332"
+				roles      	(list role_list
+				    (object Role "$UNNAMED$35"
+					quid       	"5AC6A4BF00E9"
+					supplier   	"Logical View::Business Object Model::Entidades::E07 - Contrato de Crédito"
+					quidu      	"5AC6A49D0344"
+					is_navigable 	TRUE)
+				    (object Role "$UNNAMED$36"
+					quid       	"5AC6A4BF00EB"
+					supplier   	"Logical View::Business Object Model::Trabajadores::Auxiliar de crédito"
+					quidu      	"5AC01B70004D")))
+			    (object Association "Aprueba"
+				quid       	"5AC6A571033B"
+				roles      	(list role_list
+				    (object Role "$UNNAMED$37"
+					quid       	"5AC6A5730072"
+					supplier   	"Logical View::Business Object Model::Entidades::E07 - Contrato de Crédito"
+					quidu      	"5AC6A49D0344"
+					is_navigable 	TRUE)
+				    (object Role "$UNNAMED$38"
+					quid       	"5AC6A5730075"
+					supplier   	"Logical View::Business Object Model::Trabajadores::Sectorista de crédito"
+					quidu      	"5AC01B3A006D")))
+			    (object Association "Re"
+				quid       	"5AC6A6160372"
+				roles      	(list role_list
+				    (object Role "$UNNAMED$39"
+					quid       	"5AC6A6180063"
+					supplier   	"Logical View::Business Object Model::Trabajadores::Auxiliar de caja"
+					quidu      	"5AC3237F0273"
+					is_navigable 	TRUE)
+				    (object Role "$UNNAMED$40"
+					quid       	"5AC6A618006C"
+					supplier   	"Logical View::Business Object Model::Entidades::E07 - Contrato de Crédito"
+					quidu      	"5AC6A49D0344")))
+			    (object Association "Recibe"
+				quid       	"5AC6A668031F"
+				roles      	(list role_list
+				    (object Role "$UNNAMED$41"
+					quid       	"5AC6A6690208"
+					supplier   	"Logical View::Business Object Model::Entidades::E07 - Contrato de Crédito"
+					quidu      	"5AC6A49D0344"
+					is_navigable 	TRUE)
+				    (object Role "$UNNAMED$42"
+					quid       	"5AC6A669020C"
+					supplier   	"Logical View::Business Object Model::Trabajadores::Auxiliar de caja"
+					quidu      	"5AC3237F0273"))))
 			logical_presentations 	(list unit_reference_list
 			    (object ClassDiagram "Diagrama de Entidades del Negocio"
 				quid       	"5AC2DA9300BD"
@@ -1239,13 +1137,13 @@
 				origin_x   	0
 				origin_y   	0
 				items      	(list diagram_item_list
-				    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Supervisor de crédito" @43
+				    (object ClassView "Class" "Logical View::Business Object Model::Entidades::E01 - Lista de pre-aprobados" @27
 					ShowCompartmentStereotypes 	TRUE
 					SuppressAttribute 	TRUE
 					SuppressOperation 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
-					location   	(368, 272)
+					location   	(1216, 240)
 					font       	(object Font
 					    size       	9
 					    face       	"Arial"
@@ -1256,11 +1154,472 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@43
-					    location   	(367, 496)
+					    Parent_View 	@27
+					    location   	(1216, 414)
 					    anchor_loc 	1
 					    nlines     	2
-					    max_width  	841
+					    max_width  	760
+					    justify    	0
+					    label      	"E01 - Lista de pre-aprobados")
+					icon       	"Business Entity"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC03A23034C"
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Object Model::Entidades::E02 - Hoja de visita" @28
+					ShowCompartmentStereotypes 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(512, 256)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@28
+					    location   	(512, 430)
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	763
+					    justify    	0
+					    label      	"E02 - Hoja de visita")
+					icon       	"Business Entity"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC03A02001D"
+					compartment 	(object Compartment
+					    Parent_View 	@28
+					    location   	(300, 469)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    icon_style 	"Icon"
+					    anchor     	2
+					    nlines     	1
+					    max_width  	409
+					    justify    	0)
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Object Model::Entidades::E03 - Hoja de ruta" @29
+					ShowCompartmentStereotypes 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1968, 240)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@29
+					    location   	(1968, 414)
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	767
+					    justify    	0
+					    label      	"E03 - Hoja de ruta")
+					icon       	"Business Entity"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC01828031F"
+					compartment 	(object Compartment
+					    Parent_View 	@29
+					    location   	(1767, 453)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    icon_style 	"Icon"
+					    anchor     	2
+					    nlines     	1
+					    max_width  	387
+					    justify    	0)
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Object Model::Entidades::E04 - Solicitud de crédito" @30
+					ShowCompartmentStereotypes 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(528, 848)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@30
+					    location   	(528, 1022)
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	751
+					    justify    	0
+					    label      	"E04 - Solicitud de crédito")
+					icon       	"Business Entity"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC036EA036B"
+					compartment 	(object Compartment
+					    Parent_View 	@30
+					    location   	(246, 1061)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    icon_style 	"Icon"
+					    anchor     	2
+					    nlines     	6
+					    max_width  	550
+					    justify    	0)
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Object Model::Entidades::E05 - Cheque" @31
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1216, 704)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@31
+					    location   	(1216, 878)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	757
+					    justify    	0
+					    label      	"E05 - Cheque")
+					icon       	"Business Entity"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC0379202CA"
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Object Model::Entidades::E06 - Recibo de Pago Efectivo" @32
+					ShowCompartmentStereotypes 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1984, 864)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@32
+					    location   	(1984, 1038)
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	760
+					    justify    	0
+					    label      	"E06 - Recibo de Pago Efectivo")
+					icon       	"Business Entity"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC6A3EA0139"
+					compartment 	(object Compartment
+					    Parent_View 	@32
+					    location   	(1745, 1077)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    icon_style 	"Icon"
+					    anchor     	2
+					    nlines     	5
+					    max_width  	465
+					    justify    	0)
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Object Model::Entidades::E07 - Contrato de Crédito" @33
+					ShowCompartmentStereotypes 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1232, 1120)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@33
+					    location   	(1232, 1294)
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	763
+					    justify    	0
+					    label      	"E07 - Contrato de Crédito")
+					icon       	"Business Entity"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC6A49D0344"
+					compartment 	(object Compartment
+					    Parent_View 	@33
+					    location   	(950, 1333)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    icon_style 	"Icon"
+					    anchor     	2
+					    nlines     	6
+					    max_width  	550
+					    justify    	0)
+					annotation 	8
+					autoResize 	TRUE)))
+			    (object ClassDiagram "Diagrama de Clases"
+				quid       	"5AC691AD03D7"
+				title      	"Diagrama de Clases"
+				zoom       	100
+				max_height 	28350
+				max_width  	21600
+				origin_x   	0
+				origin_y   	0
+				items      	(list diagram_item_list
+				    (object ClassView "Class" "Logical View::Business Object Model::Entidades::E01 - Lista de pre-aprobados" @34
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(2128, 352)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@34
+					    location   	(2128, 526)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	751
+					    justify    	0
+					    label      	"E01 - Lista de pre-aprobados")
+					icon       	"Business Entity"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC03A23034C"
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Sistema de crédito" @35
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(2944, 224)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@35
+					    location   	(2943, 448)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	855
+					    justify    	0
+					    label      	"Sistema de crédito")
+					icon       	"Business Worker"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC0152F0399"
+					width      	292
+					height     	290
+					annotation 	8
+					autoResize 	TRUE)
+				    (object AssociationViewNew "Genera" @36
+					location   	(2527, 286)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object SegLabel @37
+					    Parent_View 	@36
+					    location   	(2493, 228)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	TRUE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	138
+					    justify    	0
+					    label      	"Genera"
+					    pctDist    	-0.083333
+					    height     	59
+					    orientation 	0)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"5AC69254032F"
+					roleview_list 	(list RoleViews
+					    (object RoleView "$UNNAMED$15" @38
+						Parent_View 	@36
+						location   	(879, 46)
+						stereotype 	TRUE
+						line_color 	3342489
+						quidu      	"5AC69255012F"
+						client     	@36
+						supplier   	@34
+						vertices   	(list Points
+						    (2527, 286)
+						    (2256, 329))
+						line_style 	0)
+					    (object RoleView "$UNNAMED$16" @39
+						Parent_View 	@36
+						location   	(879, 46)
+						stereotype 	TRUE
+						line_color 	3342489
+						quidu      	"5AC692550132"
+						client     	@36
+						supplier   	@35
+						vertices   	(list Points
+						    (2527, 286)
+						    (2799, 244))
+						line_style 	0)))
+				    (object ClassView "Class" "Logical View::Business Object Model::Entidades::E02 - Hoja de visita" @40
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1648, 656)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@40
+					    location   	(1648, 830)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	757
+					    justify    	0
+					    label      	"E02 - Hoja de visita")
+					icon       	"Business Entity"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC03A02001D"
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Supervisor de crédito" @41
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1024, 208)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@41
+					    location   	(1023, 432)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	863
 					    justify    	0
 					    label      	"Supervisor de crédito")
 					icon       	"Business Worker"
@@ -1271,9 +1630,903 @@
 					width      	292
 					height     	290
 					annotation 	8
-					autoResize 	TRUE)))))
+					autoResize 	TRUE)
+				    (object AssociationViewNew "Genera" @42
+					location   	(1343, 435)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object SegLabel @43
+					    Parent_View 	@42
+					    location   	(1407, 377)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	TRUE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	138
+					    justify    	0
+					    label      	"Genera"
+					    pctDist    	1.583333
+					    height     	59
+					    orientation 	0)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"5AC692EE01D5"
+					roleview_list 	(list RoleViews
+					    (object RoleView "$UNNAMED$19" @44
+						Parent_View 	@42
+						location   	(191, 99)
+						stereotype 	TRUE
+						line_color 	3342489
+						quidu      	"5AC692EE039C"
+						client     	@42
+						supplier   	@40
+						vertices   	(list Points
+						    (1343, 435)
+						    (1519, 561))
+						line_style 	0)
+					    (object RoleView "$UNNAMED$20" @45
+						Parent_View 	@42
+						location   	(191, 99)
+						stereotype 	TRUE
+						line_color 	3342489
+						quidu      	"5AC692EE039E"
+						client     	@42
+						supplier   	@41
+						vertices   	(list Points
+						    (1343, 435)
+						    (1167, 310))
+						line_style 	0)))
+				    (object ClassView "Class" "Logical View::Business Object Model::Entidades::E03 - Hoja de ruta" @46
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1120, 1664)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@46
+					    location   	(1120, 1838)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	754
+					    justify    	0
+					    label      	"E03 - Hoja de ruta")
+					icon       	"Business Entity"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC01828031F"
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Promotor" @47
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(320, 1392)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@47
+					    location   	(319, 1616)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	849
+					    justify    	0
+					    label      	"Promotor")
+					icon       	"Business Worker"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC0154E01C1"
+					width      	292
+					height     	290
+					annotation 	8
+					autoResize 	TRUE)
+				    (object AssociationViewNew "Genera" @48
+					location   	(726, 1527)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object SegLabel @49
+					    Parent_View 	@48
+					    location   	(726, 1468)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	TRUE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	138
+					    justify    	0
+					    label      	"Genera"
+					    pctDist    	0.500000
+					    height     	60
+					    orientation 	0)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"5AC692AC03D1"
+					roleview_list 	(list RoleViews
+					    (object RoleView "$UNNAMED$17" @50
+						Parent_View 	@48
+						location   	(470, 439)
+						stereotype 	TRUE
+						line_color 	3342489
+						quidu      	"5AC692AD0395"
+						client     	@48
+						supplier   	@46
+						vertices   	(list Points
+						    (726, 1527)
+						    (990, 1617))
+						line_style 	0)
+					    (object RoleView "$UNNAMED$18" @51
+						Parent_View 	@48
+						location   	(470, 439)
+						stereotype 	TRUE
+						line_color 	3342489
+						quidu      	"5AC692AD0398"
+						client     	@48
+						supplier   	@47
+						vertices   	(list Points
+						    (726, 1527)
+						    (463, 1438))
+						line_style 	0)))
+				    (object ClassView "Class" "Logical View::Business Object Model::Entidades::E05 - Cheque" @52
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(3248, 704)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@52
+					    location   	(3248, 878)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	763
+					    justify    	0
+					    label      	"E05 - Cheque")
+					icon       	"Business Entity"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC0379202CA"
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Supervisor de caja" @53
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(2288, 880)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@53
+					    location   	(2287, 1104)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	859
+					    justify    	0
+					    label      	"Supervisor de caja")
+					icon       	"Business Worker"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC0174100B7"
+					width      	292
+					height     	290
+					annotation 	8
+					autoResize 	TRUE)
+				    (object AssociationViewNew "Genera" @54
+					location   	(2774, 787)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object SegLabel @55
+					    Parent_View 	@54
+					    location   	(2774, 728)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	TRUE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	138
+					    justify    	0
+					    label      	"Genera"
+					    pctDist    	0.500000
+					    height     	60
+					    orientation 	0)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"5AC69409004F"
+					roleview_list 	(list RoleViews
+					    (object RoleView "$UNNAMED$21" @56
+						Parent_View 	@54
+						location   	(918, -349)
+						stereotype 	TRUE
+						line_color 	3342489
+						quidu      	"5AC6940902EE"
+						client     	@54
+						supplier   	@52
+						vertices   	(list Points
+						    (2774, 787)
+						    (3117, 725))
+						line_style 	0)
+					    (object RoleView "$UNNAMED$22" @57
+						Parent_View 	@54
+						location   	(918, -349)
+						stereotype 	TRUE
+						line_color 	3342489
+						quidu      	"5AC6940902F1"
+						client     	@54
+						supplier   	@53
+						vertices   	(list Points
+						    (2774, 787)
+						    (2431, 850))
+						line_style 	0)))
+				    (object ClassView "Class" "Logical View::Business Object Model::Entidades::E06 - Recibo de Pago Efectivo" @58
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(2800, 1056)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@58
+					    location   	(2800, 1230)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	757
+					    justify    	0
+					    label      	"E06 - Recibo de Pago Efectivo")
+					icon       	"Business Entity"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC6A3EA0139"
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Cajero" @59
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(3488, 1632)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@59
+					    location   	(3487, 1856)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	845
+					    justify    	0
+					    label      	"Cajero")
+					icon       	"Business Worker"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC0173D007C"
+					width      	292
+					height     	290
+					annotation 	8
+					autoResize 	TRUE)
+				    (object AssociationViewNew "Genera" @60
+					location   	(3189, 1381)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object SegLabel @61
+					    Parent_View 	@60
+					    location   	(3316, 1355)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	TRUE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	138
+					    justify    	0
+					    label      	"Genera"
+					    pctDist    	2.616667
+					    height     	27
+					    orientation 	0)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"5AC6A4340119"
+					roleview_list 	(list RoleViews
+					    (object RoleView "$UNNAMED$33" @62
+						Parent_View 	@60
+						location   	(261, -331)
+						stereotype 	TRUE
+						line_color 	3342489
+						quidu      	"5AC6A4340326"
+						client     	@60
+						supplier   	@58
+						vertices   	(list Points
+						    (3189, 1381)
+						    (3035, 1254))
+						line_style 	0)
+					    (object RoleView "$UNNAMED$34" @63
+						Parent_View 	@60
+						location   	(261, -331)
+						stereotype 	TRUE
+						line_color 	3342489
+						quidu      	"5AC6A4340329"
+						client     	@60
+						supplier   	@59
+						vertices   	(list Points
+						    (3189, 1381)
+						    (3343, 1509))
+						line_style 	0)))
+				    (object ClassView "Class" "Logical View::Business Object Model::Entidades::E04 - Solicitud de crédito" @64
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(304, 224)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@64
+					    location   	(304, 398)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	754
+					    justify    	0
+					    label      	"E04 - Solicitud de crédito")
+					icon       	"Business Entity"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC036EA036B"
+					annotation 	8
+					autoResize 	TRUE)
+				    (object AssociationViewNew "Registra" @65
+					location   	(310, 835)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object SegLabel @66
+					    Parent_View 	@65
+					    location   	(213, 812)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	TRUE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	153
+					    justify    	0
+					    label      	"Registra"
+					    pctDist    	-1.133333
+					    height     	24
+					    orientation 	0)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"5AC6A23200EF"
+					roleview_list 	(list RoleViews
+					    (object RoleView "$UNNAMED$23" @67
+						Parent_View 	@65
+						location   	(6, -509)
+						stereotype 	TRUE
+						line_color 	3342489
+						quidu      	"5AC6A233007C"
+						client     	@65
+						supplier   	@64
+						vertices   	(list Points
+						    (310, 835)
+						    (305, 422))
+						line_style 	0)
+					    (object RoleView "$UNNAMED$24" @68
+						Parent_View 	@65
+						location   	(6, -509)
+						stereotype 	TRUE
+						line_color 	3342489
+						quidu      	"5AC6A2330080"
+						client     	@65
+						supplier   	@47
+						vertices   	(list Points
+						    (310, 835)
+						    (316, 1248))
+						line_style 	0)))
+				    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Auxiliar de crédito" @69
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(896, 896)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@69
+					    location   	(895, 1120)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	841
+					    justify    	0
+					    label      	"Auxiliar de crédito")
+					icon       	"Business Worker"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC01B70004D"
+					width      	292
+					height     	290
+					annotation 	8
+					autoResize 	TRUE)
+				    (object AssociationViewNew "Evalua" @70
+					location   	(622, 586)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object SegLabel @71
+					    Parent_View 	@70
+					    location   	(576, 639)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	TRUE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	120
+					    justify    	0
+					    label      	"Evalua"
+					    pctDist    	-0.283333
+					    height     	53
+					    orientation 	1)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"5AC6A38A028C"
+					roleview_list 	(list RoleViews
+					    (object RoleView "$UNNAMED$28" @72
+						Parent_View 	@70
+						location   	(238, -6)
+						stereotype 	TRUE
+						line_color 	3342489
+						quidu      	"5AC6A38B0354"
+						client     	@70
+						supplier   	@64
+						vertices   	(list Points
+						    (622, 586)
+						    (477, 422))
+						line_style 	0)
+					    (object RoleView "$UNNAMED$29" @73
+						Parent_View 	@70
+						location   	(238, -6)
+						stereotype 	TRUE
+						line_color 	3342489
+						quidu      	"5AC6A38B0359"
+						client     	@70
+						supplier   	@69
+						vertices   	(list Points
+						    (622, 586)
+						    (767, 751))
+						line_style 	0)))
+				    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Sectorista de crédito" @74
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1856, 1856)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@74
+					    location   	(1855, 2080)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	852
+					    justify    	0
+					    label      	"Sectorista de crédito")
+					icon       	"Business Worker"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC01B3A006D"
+					width      	292
+					height     	290
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Object Model::Entidades::E07 - Contrato de Crédito" @75
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1632, 1152)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@75
+					    location   	(1632, 1326)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	760
+					    justify    	0
+					    label      	"E07 - Contrato de Crédito")
+					icon       	"Business Entity"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC6A49D0344"
+					annotation 	8
+					autoResize 	TRUE)
+				    (object AssociationViewNew "Genera" @76
+					location   	(1270, 1024)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object SegLabel @77
+					    Parent_View 	@76
+					    location   	(1270, 965)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	TRUE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	138
+					    justify    	0
+					    label      	"Genera"
+					    pctDist    	0.500000
+					    height     	60
+					    orientation 	0)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"5AC6A4BE0332"
+					roleview_list 	(list RoleViews
+					    (object RoleView "$UNNAMED$35" @78
+						Parent_View 	@76
+						location   	(278, 112)
+						stereotype 	TRUE
+						line_color 	3342489
+						quidu      	"5AC6A4BF00E9"
+						client     	@76
+						supplier   	@75
+						vertices   	(list Points
+						    (1270, 1024)
+						    (1502, 1106))
+						line_style 	0)
+					    (object RoleView "$UNNAMED$36" @79
+						Parent_View 	@76
+						location   	(278, 112)
+						stereotype 	TRUE
+						line_color 	3342489
+						quidu      	"5AC6A4BF00EB"
+						client     	@76
+						supplier   	@69
+						vertices   	(list Points
+						    (1270, 1024)
+						    (1039, 943))
+						line_style 	0)))
+				    (object AssociationViewNew "Aprueba" @80
+					location   	(1750, 1531)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object SegLabel @81
+					    Parent_View 	@80
+					    location   	(1672, 1600)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	TRUE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	152
+					    justify    	0
+					    label      	"Aprueba"
+					    pctDist    	-0.800000
+					    height     	69
+					    orientation 	1)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"5AC6A571033B"
+					roleview_list 	(list RoleViews
+					    (object RoleView "$UNNAMED$37" @82
+						Parent_View 	@80
+						location   	(-410, -261)
+						stereotype 	TRUE
+						line_color 	3342489
+						quidu      	"5AC6A5730072"
+						client     	@80
+						supplier   	@75
+						vertices   	(list Points
+						    (1750, 1531)
+						    (1692, 1350))
+						line_style 	0)
+					    (object RoleView "$UNNAMED$38" @83
+						Parent_View 	@80
+						location   	(-410, -261)
+						stereotype 	TRUE
+						line_color 	3342489
+						quidu      	"5AC6A5730075"
+						client     	@80
+						supplier   	@74
+						vertices   	(list Points
+						    (1750, 1531)
+						    (1809, 1712))
+						line_style 	0)))
+				    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Auxiliar de caja" @84
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(2704, 1680)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@84
+					    location   	(2703, 1904)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	838
+					    justify    	0
+					    label      	"Auxiliar de caja")
+					icon       	"Business Worker"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC3237F0273"
+					width      	292
+					height     	290
+					annotation 	8
+					autoResize 	TRUE)
+				    (object AssociationViewNew "Recibe" @85
+					location   	(2202, 1430)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object SegLabel @86
+					    Parent_View 	@85
+					    location   	(2202, 1371)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	TRUE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    anchor     	1
+					    anchor_loc 	1
+					    nlines     	1
+					    max_width  	139
+					    justify    	0
+					    label      	"Recibe"
+					    pctDist    	0.500000
+					    height     	60
+					    orientation 	0)
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"5AC6A668031F"
+					roleview_list 	(list RoleViews
+					    (object RoleView "$UNNAMED$41" @87
+						Parent_View 	@85
+						location   	(-502, -250)
+						stereotype 	TRUE
+						line_color 	3342489
+						quidu      	"5AC6A6690208"
+						client     	@85
+						supplier   	@75
+						vertices   	(list Points
+						    (2202, 1430)
+						    (1760, 1214))
+						line_style 	0)
+					    (object RoleView "$UNNAMED$42" @88
+						Parent_View 	@85
+						location   	(-502, -250)
+						stereotype 	TRUE
+						line_color 	3342489
+						quidu      	"5AC6A669020C"
+						client     	@85
+						supplier   	@84
+						vertices   	(list Points
+						    (2202, 1430)
+						    (2559, 1604))
+						line_style 	0)))))))
 		    (object Class_Category "Trabajadores"
 			quid       	"5AC012580135"
+			stereotype 	"Business Analysis Model"
 			exportControl 	"Public"
 			logical_models 	(list unit_reference_list
 			    (object Class "Supervisor de crédito"
@@ -1284,7 +2537,13 @@
 				stereotype 	"Business Worker")
 			    (object Class "Promotor"
 				quid       	"5AC0154E01C1"
-				stereotype 	"Business Worker")
+				stereotype 	"Business Worker"
+				superclasses 	(list inheritance_relationship_list
+				    (object Inheritance_Relationship
+					quid       	"5AC692A10363"
+					label      	"Genera"
+					supplier   	"Logical View::Business Object Model::Entidades::E03 - Hoja de ruta"
+					quidu      	"5AC01828031F")))
 			    (object Class "Auxiliar de crédito"
 				quid       	"5AC01B70004D"
 				stereotype 	"Business Worker")
@@ -1296,7 +2555,2056 @@
 				stereotype 	"Business Worker")
 			    (object Class "Supervisor de caja"
 				quid       	"5AC0174100B7"
+				stereotype 	"Business Worker")
+			    (object Class "Auxiliar de caja"
+				quid       	"5AC3237F0273"
 				stereotype 	"Business Worker"))
+			logical_presentations 	(list unit_reference_list
+			    (object ClassDiagram "Trabajadores del Negocio"
+				quid       	"5AC3229F0152"
+				title      	"Trabajadores del Negocio"
+				zoom       	100
+				max_height 	28350
+				max_width  	21600
+				origin_x   	0
+				origin_y   	0
+				items      	(list diagram_item_list
+				    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Auxiliar de crédito" @89
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1680, 336)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@89
+					    location   	(1679, 560)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	845
+					    justify    	0
+					    label      	"Auxiliar de crédito")
+					icon       	"Business Worker"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC01B70004D"
+					width      	292
+					height     	290
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Cajero" @90
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1280, 816)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@90
+					    location   	(1279, 1040)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	849
+					    justify    	0
+					    label      	"Cajero")
+					icon       	"Business Worker"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC0173D007C"
+					width      	292
+					height     	290
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Promotor" @91
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(448, 336)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@91
+					    location   	(447, 560)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	852
+					    justify    	0
+					    label      	"Promotor")
+					icon       	"Business Worker"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC0154E01C1"
+					width      	292
+					height     	290
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Sectorista de crédito" @92
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1632, 832)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@92
+					    location   	(1631, 1056)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	855
+					    justify    	0
+					    label      	"Sectorista de crédito")
+					icon       	"Business Worker"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC01B3A006D"
+					width      	292
+					height     	290
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Sistema de crédito" @93
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(1286, 336)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@93
+					    location   	(1285, 560)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	859
+					    justify    	0
+					    label      	"Sistema de crédito")
+					icon       	"Business Worker"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC0152F0399"
+					width      	292
+					height     	290
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Supervisor de caja" @94
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(912, 832)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@94
+					    location   	(911, 1056)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	863
+					    justify    	0
+					    label      	"Supervisor de caja")
+					icon       	"Business Worker"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC0174100B7"
+					width      	292
+					height     	290
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Supervisor de crédito" @95
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(864, 336)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@95
+					    location   	(863, 560)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	867
+					    justify    	0
+					    label      	"Supervisor de crédito")
+					icon       	"Business Worker"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC0147C0252"
+					width      	292
+					height     	290
+					annotation 	8
+					autoResize 	TRUE)
+				    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Auxiliar de caja" @96
+					ShowCompartmentStereotypes 	TRUE
+					SuppressAttribute 	TRUE
+					SuppressOperation 	TRUE
+					IncludeAttribute 	TRUE
+					IncludeOperation 	TRUE
+					location   	(464, 832)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@96
+					    location   	(463, 1056)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	879
+					    justify    	0
+					    label      	"Auxiliar de caja")
+					icon       	"Business Worker"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC3237F0273"
+					width      	292
+					height     	290
+					annotation 	8
+					autoResize 	TRUE)))))
+		    (object Class_Category "Realización de Caso de Uso del Negocio"
+			quid       	"5AC3DF6B006B"
+			exportControl 	"Public"
+			logical_models 	(list unit_reference_list
+			    (object UseCase "Gestión Comercial"
+				quid       	"5AC3E7ED01DC"
+				stereotype 	"Business Use Case Realization"
+				visible_modules 	(list dependency_list
+				    (object Dependency_Relationship
+					quid       	"5AC3E7FC0170"
+					supplier   	"Use Case View::Business Use-Case Model::CUN01 - Captar asociados"
+					quidu      	"5AC2D866033C")))
+			    (object UseCase "Otorgamiento de Crédito"
+				quid       	"5AC3E810029C"
+				stereotype 	"Business Use Case Realization"
+				visible_modules 	(list dependency_list
+				    (object Dependency_Relationship
+					quid       	"5AC3E8310320"
+					supplier   	"Use Case View::Business Use-Case Model::CUN02 - Solicitar crédito"
+					quidu      	"5AC2D8A80173")))
+			    (object UseCase "Desembolso de Crédito"
+				quid       	"5AC3E81C006E"
+				stereotype 	"Business Use Case Realization"
+				visible_modules 	(list dependency_list
+				    (object Dependency_Relationship
+					quid       	"5AC3E83401C8"
+					supplier   	"Use Case View::Business Use-Case Model::CUN03 - Solicitar desembolso de crédito"
+					quidu      	"5AC2D8BB034A"))))
+			logical_presentations 	(list unit_reference_list
+			    (object UseCaseDiagram "CUN"
+				quid       	"5AC3E5CA0215"
+				title      	"CUN"
+				zoom       	100
+				max_height 	28350
+				max_width  	21600
+				origin_x   	0
+				origin_y   	0
+				items      	(list diagram_item_list
+				    (object UseCaseView "Use Case View::Business Use-Case Model::CUN01 - Captar asociados" @97
+					location   	(736, 448)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@97
+					    location   	(735, 623)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	879
+					    justify    	0
+					    label      	"CUN01 - Captar asociados")
+					icon       	"Business Use Case"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC2D866033C")
+				    (object UseCaseView "Logical View::Business Object Model::Realización de Caso de Uso del Negocio::Gestión Comercial" @98
+					location   	(1760, 448)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@98
+					    location   	(1759, 624)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	879
+					    justify    	0
+					    label      	"Gestión Comercial")
+					icon       	"Business Use Case Realization"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC3E7ED01DC"
+					width      	306
+					height     	194)
+				    (object DependencyView "" @99
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"5AC3E7FC0170"
+					client     	@98
+					supplier   	@97
+					vertices   	(list Points
+					    (1606, 448)
+					    (886, 448))
+					line_style 	0)
+				    (object UseCaseView "Use Case View::Business Use-Case Model::CUN02 - Solicitar crédito" @100
+					location   	(736, 992)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@100
+					    location   	(735, 1167)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	879
+					    justify    	0
+					    label      	"CUN02 - Solicitar crédito")
+					icon       	"Business Use Case"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC2D8A80173")
+				    (object UseCaseView "Use Case View::Business Use-Case Model::CUN03 - Solicitar desembolso de crédito" @101
+					location   	(736, 1520)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@101
+					    location   	(735, 1695)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	879
+					    justify    	0
+					    label      	"CUN03 - Solicitar desembolso de crédito")
+					icon       	"Business Use Case"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC2D8BB034A")
+				    (object UseCaseView "Logical View::Business Object Model::Realización de Caso de Uso del Negocio::Otorgamiento de Crédito" @102
+					location   	(1776, 992)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@102
+					    location   	(1775, 1168)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	879
+					    justify    	0
+					    label      	"Otorgamiento de Crédito")
+					icon       	"Business Use Case Realization"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC3E810029C"
+					width      	306
+					height     	194)
+				    (object UseCaseView "Logical View::Business Object Model::Realización de Caso de Uso del Negocio::Desembolso de Crédito" @103
+					location   	(1776, 1520)
+					font       	(object Font
+					    size       	9
+					    face       	"Arial"
+					    bold       	FALSE
+					    italics    	FALSE
+					    underline  	FALSE
+					    strike     	FALSE
+					    color      	0
+					    default_color 	TRUE)
+					label      	(object ItemLabel
+					    Parent_View 	@103
+					    location   	(1775, 1696)
+					    anchor_loc 	1
+					    nlines     	2
+					    max_width  	879
+					    justify    	0
+					    label      	"Desembolso de Crédito")
+					icon       	"Business Use Case Realization"
+					icon_style 	"Icon"
+					line_color 	3342489
+					fill_color 	13434879
+					quidu      	"5AC3E81C006E"
+					width      	306
+					height     	194)
+				    (object DependencyView "" @104
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"5AC3E8310320"
+					client     	@102
+					supplier   	@100
+					vertices   	(list Points
+					    (1623, 992)
+					    (886, 992))
+					line_style 	0)
+				    (object DependencyView "" @105
+					stereotype 	TRUE
+					line_color 	3342489
+					quidu      	"5AC3E83401C8"
+					client     	@103
+					supplier   	@101
+					vertices   	(list Points
+					    (1623, 1520)
+					    (886, 1520))
+					line_style 	0)))))
+		    (object Class_Category "DA Otorgar crédito"
+			quid       	"5AC5F14F00EC"
+			exportControl 	"Public"
+			logical_models 	(list unit_reference_list)
+			statemachine 	(object State_Machine "State/Activity Model"
+			    quid       	"5AC5F16202DD"
+			    states     	(list States
+				(object State "$UNNAMED$43"
+				    quid       	"5AC5F1FA00A7"
+				    type       	"StartState")
+				(object ActivityState "Verificar fuentes de información"
+				    quid       	"5AC5F1FC02F6")
+				(object ActivityState "Validar datos e historial crediticio"
+				    quid       	"5AC5F22F0006")
+				(object ActivityState "Registrar ingresos, descuentos y otros"
+				    quid       	"5AC5F23C032E")
+				(object ActivityState "Comunicar monto a desembolsar"
+				    quid       	"5AC5F25B024F")
+				(object ActivityState "Evaluar y verificar información con el expediente físico"
+				    quid       	"5AC5F37C0163")
+				(object ActivityState "Analizar información registrada y/o resolver casos observados"
+				    quid       	"5AC5F3B0016A")
+				(object ActivityState "$UNNAMED$44"
+				    quid       	"5AC5F3E802BC")
+				(object ActivityState "Aprobar crédito e imprimir documentos"
+				    quid       	"5AC5F3EA020B")
+				(object ActivityState "Solicitar firma a docente"
+				    quid       	"5AC5F4B80249")
+				(object State "$UNNAMED$45"
+				    quid       	"5AC5F4C800E1"
+				    type       	"EndState")
+				(object Decision "¿Verificación conforme?"
+				    quid       	"5AC5FC8C0174")
+				(object Decision "¿Evaluación conforme?"
+				    quid       	"5AC5FCA7002C")
+				(object Decision "¿Conforme?"
+				    quid       	"5AC5FCD9023A"))
+			    partitions 	(list Partitions
+				(object Partition "$UNNAMED$46"
+				    quid       	"5AC5F1B8029F"
+				    class      	"Logical View::Business Object Model::Trabajadores::Auxiliar de crédito"
+				    quidu      	"5AC01B70004D"
+				    persistence 	"Transient"
+				    creationObj 	FALSE
+				    multi      	FALSE)
+				(object Partition "$UNNAMED$47"
+				    quid       	"5AC5F1B9030F"
+				    class      	"Logical View::Business Object Model::Trabajadores::Sectorista de crédito"
+				    quidu      	"5AC01B3A006D"
+				    persistence 	"Transient"
+				    creationObj 	FALSE
+				    multi      	FALSE))
+			    objects    	(list Objects)
+			    transitions 	(list transition_list
+				(object State_Transition
+				    quid       	"5AC5F53D02A9"
+				    supplier   	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::Verificar fuentes de información"
+				    supplier_quidu 	"5AC5F1FC02F6"
+				    client     	"$UNNAMED$43"
+				    client_quidu 	"5AC5F1FA00A7"
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5F53D02AC"))
+				(object State_Transition
+				    quid       	"5AC5F5530249"
+				    supplier   	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::Registrar ingresos, descuentos y otros"
+				    supplier_quidu 	"5AC5F23C032E"
+				    client     	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::Validar datos e historial crediticio"
+				    client_quidu 	"5AC5F22F0006"
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5F553024C"))
+				(object State_Transition
+				    quid       	"5AC5F56B0382"
+				    supplier   	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::Evaluar y verificar información con el expediente físico"
+				    supplier_quidu 	"5AC5F37C0163"
+				    client     	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::Comunicar monto a desembolsar"
+				    client_quidu 	"5AC5F25B024F"
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5F56B0385"))
+				(object State_Transition
+				    quid       	"5AC5F57202A9"
+				    supplier   	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::Analizar información registrada y/o resolver casos observados"
+				    supplier_quidu 	"5AC5F3B0016A"
+				    client     	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::Evaluar y verificar información con el expediente físico"
+				    client_quidu 	"5AC5F37C0163"
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5F57202AC"))
+				(object State_Transition
+				    quid       	"5AC5F58B0352"
+				    supplier   	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::Solicitar firma a docente"
+				    supplier_quidu 	"5AC5F4B80249"
+				    client     	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::Aprobar crédito e imprimir documentos"
+				    client_quidu 	"5AC5F3EA020B"
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5F58B0355"))
+				(object State_Transition
+				    quid       	"5AC5F5930349"
+				    supplier   	"$UNNAMED$45"
+				    supplier_quidu 	"5AC5F4C800E1"
+				    client     	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::Solicitar firma a docente"
+				    client_quidu 	"5AC5F4B80249"
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5F593034C"))
+				(object State_Transition
+				    quid       	"5AC5FCFE0384"
+				    label      	""
+				    supplier   	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::Aprobar crédito e imprimir documentos"
+				    supplier_quidu 	"5AC5F3EA020B"
+				    client     	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::¿Conforme?"
+				    client_quidu 	"5AC5FCD9023A"
+				    Event      	(object Event "Si"
+					quid       	"5AC5FCFE0385")
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5FCFE0387"))
+				(object State_Transition
+				    quid       	"5AC5FD0102AC"
+				    supplier   	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::¿Conforme?"
+				    supplier_quidu 	"5AC5FCD9023A"
+				    client     	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::Analizar información registrada y/o resolver casos observados"
+				    client_quidu 	"5AC5F3B0016A"
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5FD0102AF"))
+				(object State_Transition
+				    quid       	"5AC5FD040093"
+				    label      	""
+				    supplier   	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::Comunicar monto a desembolsar"
+				    supplier_quidu 	"5AC5F25B024F"
+				    client     	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::¿Evaluación conforme?"
+				    client_quidu 	"5AC5FCA7002C"
+				    Event      	(object Event "Si"
+					quid       	"5AC5FD040094")
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5FD040096"))
+				(object State_Transition
+				    quid       	"5AC5FD06034C"
+				    supplier   	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::¿Evaluación conforme?"
+				    supplier_quidu 	"5AC5FCA7002C"
+				    client     	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::Registrar ingresos, descuentos y otros"
+				    client_quidu 	"5AC5F23C032E"
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5FD06034F"))
+				(object State_Transition
+				    quid       	"5AC5FD150203"
+				    label      	""
+				    supplier   	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::¿Verificación conforme?"
+				    supplier_quidu 	"5AC5FC8C0174"
+				    client     	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::Verificar fuentes de información"
+				    client_quidu 	"5AC5F1FC02F6"
+				    Event      	(object Event "Si"
+					quid       	"5AC5FD150204")
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5FD150206"))
+				(object State_Transition
+				    quid       	"5AC5FD1702D3"
+				    supplier   	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::Validar datos e historial crediticio"
+				    supplier_quidu 	"5AC5F22F0006"
+				    client     	"Logical View::Business Object Model::DA Otorgar crédito::State/Activity Model::¿Verificación conforme?"
+				    client_quidu 	"5AC5FC8C0174"
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5FD1702D6")))
+			    objectflows 	(list objectflow_list)
+			    statediagrams 	(list StateDiagrams
+				(object ActivityDiagram "DA Otorgar crédiito"
+				    quid       	"5AC5F16202E1"
+				    title      	"DA Otorgar crédiito"
+				    zoom       	100
+				    max_height 	28350
+				    max_width  	21600
+				    origin_x   	0
+				    origin_y   	0
+				    items      	(list diagram_item_list
+					(object Swimlane "$UNNAMED$46" @106
+					    line_color 	3342489
+					    quidu      	"5AC5F1B8029F"
+					    width      	742)
+					(object StateView "StartState" "$UNNAMED$43" @107
+					    Parent_View 	@106
+					    location   	(336, 256)
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    quidu      	"5AC5F1FA00A7"
+					    autoResize 	TRUE)
+					(object ActivityStateView "Verificar fuentes de información" @108
+					    Parent_View 	@106
+					    location   	(320, 528)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object ItemLabel
+						Parent_View 	@108
+						location   	(320, 529)
+						fill_color 	13434879
+						anchor_loc 	1
+						nlines     	2
+						max_width  	269
+						justify    	0
+						label      	"Verificar fuentes de información")
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5F1FC02F6"
+					    annotation 	1
+					    autoResize 	TRUE)
+					(object TransView "" @109
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5F53D02A9"
+					    client     	@107
+					    supplier   	@108
+					    vertices   	(list Points
+						(334, 286)
+						(323, 475))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object DecisionView "¿Verificación conforme?" @110
+					    Parent_View 	@106
+					    location   	(320, 848)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object SegLabel @111
+						Parent_View 	@110
+						location   	(376, 799)
+						font       	(object Font
+						    size       	9
+						    face       	"Arial"
+						    bold       	FALSE
+						    italics    	TRUE
+						    underline  	FALSE
+						    strike     	FALSE
+						    color      	0
+						    default_color 	TRUE)
+						anchor     	1
+						nlines     	2
+						max_width  	300
+						justify    	1
+						label      	"¿Verificación conforme?"
+						pctDist    	1.000000
+						height     	0
+						orientation 	0)
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5FC8C0174"
+					    autoResize 	TRUE)
+					(object ActivityStateView "Validar datos e historial crediticio" @112
+					    Parent_View 	@106
+					    location   	(320, 1120)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object ItemLabel
+						Parent_View 	@112
+						location   	(320, 1121)
+						fill_color 	13434879
+						anchor_loc 	1
+						nlines     	2
+						max_width  	336
+						justify    	0
+						label      	"Validar datos e historial crediticio")
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5F22F0006"
+					    width      	442
+					    annotation 	1
+					    autoResize 	TRUE)
+					(object ActivityStateView "Registrar ingresos, descuentos y otros" @113
+					    Parent_View 	@106
+					    location   	(320, 1488)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object ItemLabel
+						Parent_View 	@113
+						location   	(320, 1489)
+						fill_color 	13434879
+						anchor_loc 	1
+						nlines     	2
+						max_width  	368
+						justify    	0
+						label      	"Registrar ingresos, descuentos y otros")
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5F23C032E"
+					    width      	474
+					    annotation 	1
+					    autoResize 	TRUE)
+					(object TransView "" @114
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5F5530249"
+					    client     	@112
+					    supplier   	@113
+					    vertices   	(list Points
+						(320, 1173)
+						(320, 1436))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object DecisionView "¿Evaluación conforme?" @115
+					    Parent_View 	@106
+					    location   	(320, 1824)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object SegLabel @116
+						Parent_View 	@115
+						location   	(376, 1775)
+						font       	(object Font
+						    size       	9
+						    face       	"Arial"
+						    bold       	FALSE
+						    italics    	TRUE
+						    underline  	FALSE
+						    strike     	FALSE
+						    color      	0
+						    default_color 	TRUE)
+						anchor     	1
+						nlines     	2
+						max_width  	300
+						justify    	1
+						label      	"¿Evaluación conforme?"
+						pctDist    	1.000000
+						height     	0
+						orientation 	0)
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5FCA7002C"
+					    autoResize 	TRUE)
+					(object ActivityStateView "Comunicar monto a desembolsar" @117
+					    Parent_View 	@106
+					    location   	(320, 2192)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object ItemLabel
+						Parent_View 	@117
+						location   	(320, 2193)
+						fill_color 	13434879
+						anchor_loc 	1
+						nlines     	2
+						max_width  	362
+						justify    	0
+						label      	"Comunicar monto a desembolsar")
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5F25B024F"
+					    width      	468
+					    annotation 	1
+					    autoResize 	TRUE)
+					(object ActivityStateView "Solicitar firma a docente" @118
+					    Parent_View 	@106
+					    location   	(336, 3152)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object ItemLabel
+						Parent_View 	@118
+						location   	(336, 3153)
+						fill_color 	13434879
+						anchor_loc 	1
+						nlines     	2
+						max_width  	269
+						justify    	0
+						label      	"Solicitar firma a docente")
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5F4B80249"
+					    annotation 	1
+					    autoResize 	TRUE)
+					(object StateView "EndState" "$UNNAMED$45" @119
+					    Parent_View 	@106
+					    location   	(336, 3424)
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    quidu      	"5AC5F4C800E1"
+					    autoResize 	TRUE)
+					(object Swimlane "$UNNAMED$47" @120
+					    location   	(742, 0)
+					    line_color 	3342489
+					    quidu      	"5AC5F1B9030F"
+					    width      	842)
+					(object ActivityStateView "Evaluar y verificar información con el expediente físico" @121
+					    Parent_View 	@120
+					    location   	(1168, 2192)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object ItemLabel
+						Parent_View 	@121
+						location   	(1168, 2193)
+						fill_color 	13434879
+						anchor_loc 	1
+						nlines     	2
+						max_width  	604
+						justify    	0
+						label      	"Evaluar y verificar información con el expediente físico")
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5F37C0163"
+					    width      	710
+					    annotation 	1
+					    autoResize 	TRUE)
+					(object TransView "" @122
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5F56B0382"
+					    client     	@117
+					    supplier   	@121
+					    vertices   	(list Points
+						(526, 2192)
+						(871, 2192))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object ActivityStateView "Analizar información registrada y/o resolver casos observados" @123
+					    Parent_View 	@120
+					    location   	(1168, 2608)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object ItemLabel
+						Parent_View 	@123
+						location   	(1168, 2609)
+						fill_color 	13434879
+						anchor_loc 	1
+						nlines     	2
+						max_width  	592
+						justify    	0
+						label      	"Analizar información registrada y/o resolver casos observados")
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5F3B0016A"
+					    width      	698
+					    annotation 	1
+					    autoResize 	TRUE)
+					(object TransView "" @124
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5F57202A9"
+					    client     	@121
+					    supplier   	@123
+					    vertices   	(list Points
+						(1168, 2245)
+						(1168, 2556))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object DecisionView "¿Conforme?" @125
+					    Parent_View 	@120
+					    location   	(1152, 2896)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object SegLabel @126
+						Parent_View 	@125
+						location   	(1208, 2847)
+						font       	(object Font
+						    size       	9
+						    face       	"Arial"
+						    bold       	FALSE
+						    italics    	TRUE
+						    underline  	FALSE
+						    strike     	FALSE
+						    color      	0
+						    default_color 	TRUE)
+						anchor     	1
+						nlines     	2
+						max_width  	300
+						justify    	1
+						label      	"¿Conforme?"
+						pctDist    	1.000000
+						height     	0
+						orientation 	0)
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5FCD9023A"
+					    autoResize 	TRUE)
+					(object ActivityStateView "Aprobar crédito e imprimir documentos" @127
+					    Parent_View 	@120
+					    location   	(1152, 3152)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object ItemLabel
+						Parent_View 	@127
+						location   	(1152, 3153)
+						fill_color 	13434879
+						anchor_loc 	1
+						nlines     	2
+						max_width  	448
+						justify    	0
+						label      	"Aprobar crédito e imprimir documentos")
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5F3EA020B"
+					    width      	554
+					    annotation 	1
+					    autoResize 	TRUE)
+					(object TransView "" @128
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5F58B0352"
+					    client     	@127
+					    supplier   	@118
+					    vertices   	(list Points
+						(914, 3152)
+						(507, 3152))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object Swimlane "" @129
+					    location   	(1584, 0)
+					    line_color 	3342489
+					    width      	450)
+					(object TransView "" @130
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5F5930349"
+					    client     	@118
+					    supplier   	@119
+					    vertices   	(list Points
+						(336, 3205)
+						(336, 3382))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object TransView "" @131
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object SegLabel @132
+						Parent_View 	@131
+						location   	(1197, 3016)
+						font       	(object Font
+						    size       	9
+						    face       	"Arial"
+						    bold       	FALSE
+						    italics    	FALSE
+						    underline  	FALSE
+						    strike     	FALSE
+						    color      	0
+						    default_color 	TRUE)
+						anchor_loc 	1
+						nlines     	1
+						max_width  	450
+						justify    	0
+						label      	"Si"
+						pctDist    	0.500000
+						height     	45
+						orientation 	0)
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5FCFE0384"
+					    client     	@125
+					    supplier   	@127
+					    vertices   	(list Points
+						(1152, 2933)
+						(1152, 3100))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object TransView "" @133
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5FD0102AC"
+					    client     	@123
+					    supplier   	@125
+					    vertices   	(list Points
+						(1165, 2660)
+						(1152, 2859))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object TransView "" @134
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object SegLabel @135
+						Parent_View 	@134
+						location   	(365, 2001)
+						font       	(object Font
+						    size       	9
+						    face       	"Arial"
+						    bold       	FALSE
+						    italics    	FALSE
+						    underline  	FALSE
+						    strike     	FALSE
+						    color      	0
+						    default_color 	TRUE)
+						anchor_loc 	1
+						nlines     	1
+						max_width  	450
+						justify    	0
+						label      	"Si"
+						pctDist    	0.500000
+						height     	45
+						orientation 	0)
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5FD040093"
+					    client     	@115
+					    supplier   	@117
+					    vertices   	(list Points
+						(320, 1861)
+						(320, 2140))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object TransView "" @136
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5FD06034C"
+					    client     	@113
+					    supplier   	@115
+					    vertices   	(list Points
+						(320, 1541)
+						(320, 1787))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object TransView "" @137
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object SegLabel @138
+						Parent_View 	@137
+						location   	(365, 696)
+						font       	(object Font
+						    size       	9
+						    face       	"Arial"
+						    bold       	FALSE
+						    italics    	FALSE
+						    underline  	FALSE
+						    strike     	FALSE
+						    color      	0
+						    default_color 	TRUE)
+						anchor_loc 	1
+						nlines     	1
+						max_width  	450
+						justify    	0
+						label      	"Si"
+						pctDist    	0.500000
+						height     	45
+						orientation 	0)
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5FD150203"
+					    client     	@108
+					    supplier   	@110
+					    vertices   	(list Points
+						(320, 581)
+						(320, 811))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object TransView "" @139
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5FD1702D3"
+					    client     	@110
+					    supplier   	@112
+					    vertices   	(list Points
+						(320, 885)
+						(320, 1068))
+					    line_style 	0
+					    x_offset   	FALSE)))))
+			logical_presentations 	(list unit_reference_list))
+		    (object Class_Category "DA Desembolsar crédito"
+			quid       	"5AC5F924007D"
+			exportControl 	"Public"
+			logical_models 	(list unit_reference_list)
+			statemachine 	(object State_Machine "State/Activity Model2"
+			    quid       	"5AC5F9760354"
+			    states     	(list States
+				(object State "$UNNAMED$48"
+				    quid       	"5AC5F9C10158"
+				    type       	"StartState")
+				(object ActivityState "Revisar crédito otorgado"
+				    quid       	"5AC5FA1100F0")
+				(object Decision "¿Efectivo?"
+				    quid       	"5AC5FA1E03C0")
+				(object ActivityState "Generar desembolso"
+				    quid       	"5AC5FA400377")
+				(object ActivityState "Verificar monto a desembolsar"
+				    quid       	"5AC5FA5D0018")
+				(object ActivityState "Acreditación y documentación para el desembolso"
+				    quid       	"5AC5FA6902F0")
+				(object ActivityState "Otorga efectivo"
+				    quid       	"5AC5FA7E00BF")
+				(object Decision "¿Tipo de desembolso?"
+				    quid       	"5AC5FA9702AF")
+				(object ActivityState "Generar deposito"
+				    quid       	"5AC5FAAA02E7")
+				(object ActivityState "Generar cheque"
+				    quid       	"5AC5FAB60087")
+				(object ActivityState "Notificar desembolso por deposito"
+				    quid       	"5AC5FAD2004F")
+				(object ActivityState "Entregar cheque"
+				    quid       	"5AC5FAE50127")
+				(object State "$UNNAMED$49"
+				    quid       	"5AC5FC030184"
+				    type       	"EndState"))
+			    partitions 	(list Partitions
+				(object Partition "$UNNAMED$50"
+				    quid       	"5AC5F9940371"
+				    class      	"Logical View::Business Object Model::Trabajadores::Auxiliar de caja"
+				    quidu      	"5AC3237F0273"
+				    persistence 	"Transient"
+				    creationObj 	FALSE
+				    multi      	FALSE)
+				(object Partition "$UNNAMED$51"
+				    quid       	"5AC5F99503E1"
+				    class      	"Logical View::Business Object Model::Trabajadores::Supervisor de caja"
+				    quidu      	"5AC0174100B7"
+				    persistence 	"Transient"
+				    creationObj 	FALSE
+				    multi      	FALSE)
+				(object Partition "$UNNAMED$52"
+				    quid       	"5AC5F99700B9"
+				    class      	"Logical View::Business Object Model::Trabajadores::Cajero"
+				    quidu      	"5AC0173D007C"
+				    persistence 	"Transient"
+				    creationObj 	FALSE
+				    multi      	FALSE))
+			    objects    	(list Objects)
+			    transitions 	(list transition_list
+				(object State_Transition
+				    quid       	"5AC5FAFB028F"
+				    supplier   	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::Revisar crédito otorgado"
+				    supplier_quidu 	"5AC5FA1100F0"
+				    client     	"$UNNAMED$48"
+				    client_quidu 	"5AC5F9C10158"
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5FAFB0292"))
+				(object State_Transition
+				    quid       	"5AC5FAFE032F"
+				    supplier   	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::¿Efectivo?"
+				    supplier_quidu 	"5AC5FA1E03C0"
+				    client     	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::Revisar crédito otorgado"
+				    client_quidu 	"5AC5FA1100F0"
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5FAFE0332"))
+				(object State_Transition
+				    quid       	"5AC5FB060167"
+				    label      	""
+				    supplier   	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::Generar desembolso"
+				    supplier_quidu 	"5AC5FA400377"
+				    client     	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::¿Efectivo?"
+				    client_quidu 	"5AC5FA1E03C0"
+				    Event      	(object Event "Si"
+					quid       	"5AC5FB060168")
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5FB06016A"))
+				(object State_Transition
+				    quid       	"5AC5FB0C0097"
+				    label      	""
+				    supplier   	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::Verificar monto a desembolsar"
+				    supplier_quidu 	"5AC5FA5D0018"
+				    client     	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::¿Efectivo?"
+				    client_quidu 	"5AC5FA1E03C0"
+				    Event      	(object Event "No"
+					quid       	"5AC5FB0C0098")
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5FB0C009A"))
+				(object State_Transition
+				    quid       	"5AC5FB57022E"
+				    supplier   	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::¿Tipo de desembolso?"
+				    supplier_quidu 	"5AC5FA9702AF"
+				    client     	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::Generar desembolso"
+				    client_quidu 	"5AC5FA400377"
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5FB570231"))
+				(object State_Transition
+				    quid       	"5AC5FB59038F"
+				    label      	""
+				    supplier   	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::Generar deposito"
+				    supplier_quidu 	"5AC5FAAA02E7"
+				    client     	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::¿Tipo de desembolso?"
+				    client_quidu 	"5AC5FA9702AF"
+				    Event      	(object Event "Déposito"
+					quid       	"5AC5FB590390")
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5FB590392"))
+				(object State_Transition
+				    quid       	"5AC5FB5C00D7"
+				    label      	""
+				    supplier   	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::Generar cheque"
+				    supplier_quidu 	"5AC5FAB60087"
+				    client     	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::¿Tipo de desembolso?"
+				    client_quidu 	"5AC5FA9702AF"
+				    Event      	(object Event "Cheque"
+					quid       	"5AC5FB5C00D8")
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5FB5C00DA"))
+				(object State_Transition
+				    quid       	"5AC5FB5E033E"
+				    supplier   	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::Notificar desembolso por deposito"
+				    supplier_quidu 	"5AC5FAD2004F"
+				    client     	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::Generar deposito"
+				    client_quidu 	"5AC5FAAA02E7"
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5FB5E0341"))
+				(object State_Transition
+				    quid       	"5AC5FB61035F"
+				    supplier   	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::Entregar cheque"
+				    supplier_quidu 	"5AC5FAE50127"
+				    client     	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::Generar cheque"
+				    client_quidu 	"5AC5FAB60087"
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5FB610362"))
+				(object State_Transition
+				    quid       	"5AC5FB80039E"
+				    supplier   	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::Acreditación y documentación para el desembolso"
+				    supplier_quidu 	"5AC5FA6902F0"
+				    client     	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::Verificar monto a desembolsar"
+				    client_quidu 	"5AC5FA5D0018"
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5FB8003A1"))
+				(object State_Transition
+				    quid       	"5AC5FB8302B6"
+				    supplier   	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::Otorga efectivo"
+				    supplier_quidu 	"5AC5FA7E00BF"
+				    client     	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::Acreditación y documentación para el desembolso"
+				    client_quidu 	"5AC5FA6902F0"
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5FB8302B9"))
+				(object State_Transition
+				    quid       	"5AC5FC07001D"
+				    supplier   	"$UNNAMED$49"
+				    supplier_quidu 	"5AC5FC030184"
+				    client     	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::Otorga efectivo"
+				    client_quidu 	"5AC5FA7E00BF"
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5FC070020"))
+				(object State_Transition
+				    quid       	"5AC5FC0E0365"
+				    supplier   	"$UNNAMED$49"
+				    supplier_quidu 	"5AC5FC030184"
+				    client     	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::Entregar cheque"
+				    client_quidu 	"5AC5FAE50127"
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5FC0E0368"))
+				(object State_Transition
+				    quid       	"5AC5FE290179"
+				    supplier   	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::Notificar desembolso por deposito"
+				    supplier_quidu 	"5AC5FAD2004F"
+				    client     	"Logical View::Business Object Model::DA Desembolsar crédito::State/Activity Model2::Notificar desembolso por deposito"
+				    client_quidu 	"5AC5FAD2004F"
+				    sendEvent  	(object sendEvent
+					quid       	"5AC5FE29017C")))
+			    objectflows 	(list objectflow_list)
+			    statediagrams 	(list StateDiagrams
+				(object ActivityDiagram "Desembolso de crédito"
+				    quid       	"5AC5F9760359"
+				    title      	"Desembolso de crédito"
+				    zoom       	100
+				    max_height 	28350
+				    max_width  	21600
+				    origin_x   	0
+				    origin_y   	19
+				    items      	(list diagram_item_list
+					(object Swimlane "$UNNAMED$51" @140
+					    line_color 	3342489
+					    quidu      	"5AC5F99503E1"
+					    width      	1122)
+					(object ActivityStateView "Generar desembolso" @141
+					    Parent_View 	@140
+					    location   	(496, 672)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object ItemLabel
+						Parent_View 	@141
+						location   	(496, 673)
+						fill_color 	13434879
+						anchor_loc 	1
+						nlines     	2
+						max_width  	269
+						justify    	0
+						label      	"Generar desembolso")
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5FA400377"
+					    annotation 	1
+					    autoResize 	TRUE)
+					(object DecisionView "¿Tipo de desembolso?" @142
+					    Parent_View 	@140
+					    location   	(560, 928)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object SegLabel @143
+						Parent_View 	@142
+						location   	(456, 785)
+						font       	(object Font
+						    size       	9
+						    face       	"Arial"
+						    bold       	FALSE
+						    italics    	TRUE
+						    underline  	FALSE
+						    strike     	FALSE
+						    color      	0
+						    default_color 	TRUE)
+						anchor     	1
+						nlines     	1
+						max_width  	440
+						justify    	1
+						label      	"¿Tipo de desembolso?"
+						pctDist    	-1.218330
+						height     	14
+						orientation 	0)
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5FA9702AF"
+					    autoResize 	TRUE)
+					(object TransView "" @144
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5FB57022E"
+					    client     	@141
+					    supplier   	@142
+					    vertices   	(list Points
+						(509, 724)
+						(560, 891))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object ActivityStateView "Generar deposito" @145
+					    Parent_View 	@140
+					    location   	(320, 1152)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object ItemLabel
+						Parent_View 	@145
+						location   	(320, 1153)
+						fill_color 	13434879
+						anchor_loc 	1
+						nlines     	2
+						max_width  	269
+						justify    	0
+						label      	"Generar deposito")
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5FAAA02E7"
+					    annotation 	1
+					    autoResize 	TRUE)
+					(object ActivityStateView "Generar cheque" @146
+					    Parent_View 	@140
+					    location   	(864, 1136)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object ItemLabel
+						Parent_View 	@146
+						location   	(864, 1137)
+						fill_color 	13434879
+						anchor_loc 	1
+						nlines     	2
+						max_width  	269
+						justify    	0
+						label      	"Generar cheque")
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5FAB60087"
+					    annotation 	1
+					    autoResize 	TRUE)
+					(object ActivityStateView "Notificar desembolso por deposito" @147
+					    Parent_View 	@140
+					    location   	(326, 1472)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object ItemLabel
+						Parent_View 	@147
+						location   	(326, 1473)
+						fill_color 	13434879
+						anchor_loc 	1
+						nlines     	2
+						max_width  	426
+						justify    	0
+						label      	"Notificar desembolso por deposito")
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5FAD2004F"
+					    width      	532
+					    annotation 	1
+					    autoResize 	TRUE)
+					(object TransView "" @148
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5FB5E033E"
+					    client     	@145
+					    supplier   	@147
+					    vertices   	(list Points
+						(320, 1204)
+						(325, 1419))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object ActivityStateView "Entregar cheque" @149
+					    Parent_View 	@140
+					    location   	(875, 1456)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object ItemLabel
+						Parent_View 	@149
+						location   	(875, 1457)
+						fill_color 	13434879
+						anchor_loc 	1
+						nlines     	2
+						max_width  	269
+						justify    	0
+						label      	"Entregar cheque")
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5FAE50127"
+					    annotation 	1
+					    autoResize 	TRUE)
+					(object TransView "" @150
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5FB61035F"
+					    client     	@146
+					    supplier   	@149
+					    vertices   	(list Points
+						(865, 1189)
+						(873, 1404))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object Swimlane "$UNNAMED$50" @151
+					    location   	(1122, 0)
+					    line_color 	3342489
+					    quidu      	"5AC5F9940371"
+					    width      	720)
+					(object StateView "StartState" "$UNNAMED$48" @152
+					    Parent_View 	@151
+					    location   	(1440, 96)
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    quidu      	"5AC5F9C10158"
+					    autoResize 	TRUE)
+					(object ActivityStateView "Revisar crédito otorgado" @153
+					    Parent_View 	@151
+					    location   	(1440, 384)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object ItemLabel
+						Parent_View 	@153
+						location   	(1440, 385)
+						fill_color 	13434879
+						anchor_loc 	1
+						nlines     	2
+						max_width  	269
+						justify    	0
+						label      	"Revisar crédito otorgado")
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5FA1100F0"
+					    annotation 	1
+					    autoResize 	TRUE)
+					(object TransView "" @154
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5FAFB028F"
+					    client     	@152
+					    supplier   	@153
+					    vertices   	(list Points
+						(1440, 126)
+						(1440, 332))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object DecisionView "¿Efectivo?" @155
+					    Parent_View 	@151
+					    location   	(1440, 672)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object SegLabel @156
+						Parent_View 	@155
+						location   	(1340, 734)
+						font       	(object Font
+						    size       	9
+						    face       	"Arial"
+						    bold       	FALSE
+						    italics    	TRUE
+						    underline  	FALSE
+						    strike     	FALSE
+						    color      	0
+						    default_color 	TRUE)
+						anchor     	1
+						nlines     	2
+						max_width  	300
+						justify    	1
+						label      	"¿Efectivo?"
+						pctDist    	-0.085645
+						height     	169
+						orientation 	1)
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5FA1E03C0"
+					    autoResize 	TRUE)
+					(object TransView "" @157
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5FAFE032F"
+					    client     	@153
+					    supplier   	@155
+					    vertices   	(list Points
+						(1440, 437)
+						(1440, 635))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object TransView "" @158
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object SegLabel @159
+						Parent_View 	@158
+						location   	(1016, 717)
+						font       	(object Font
+						    size       	9
+						    face       	"Arial"
+						    bold       	FALSE
+						    italics    	FALSE
+						    underline  	FALSE
+						    strike     	FALSE
+						    color      	0
+						    default_color 	TRUE)
+						anchor_loc 	1
+						nlines     	1
+						max_width  	450
+						justify    	0
+						label      	"Si"
+						pctDist    	0.500000
+						height     	45
+						orientation 	0)
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5FB060167"
+					    client     	@155
+					    supplier   	@141
+					    vertices   	(list Points
+						(1365, 672)
+						(667, 672))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object StateView "EndState" "$UNNAMED$49" @160
+					    Parent_View 	@151
+					    location   	(1536, 1824)
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    quidu      	"5AC5FC030184"
+					    autoResize 	TRUE)
+					(object Swimlane "$UNNAMED$52" @161
+					    location   	(1842, 0)
+					    line_color 	3342489
+					    quidu      	"5AC5F99700B9"
+					    width      	800)
+					(object ActivityStateView "Verificar monto a desembolsar" @162
+					    Parent_View 	@161
+					    location   	(2250, 672)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object ItemLabel
+						Parent_View 	@162
+						location   	(2250, 673)
+						fill_color 	13434879
+						anchor_loc 	1
+						nlines     	2
+						max_width  	269
+						justify    	0
+						label      	"Verificar monto a desembolsar")
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5FA5D0018"
+					    annotation 	1
+					    autoResize 	TRUE)
+					(object TransView "" @163
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object SegLabel @164
+						Parent_View 	@163
+						location   	(1797, 709)
+						font       	(object Font
+						    size       	9
+						    face       	"Arial"
+						    bold       	FALSE
+						    italics    	FALSE
+						    underline  	FALSE
+						    strike     	FALSE
+						    color      	0
+						    default_color 	TRUE)
+						anchor_loc 	1
+						nlines     	1
+						max_width  	60
+						justify    	0
+						label      	"No"
+						pctDist    	0.500000
+						height     	37
+						orientation 	1)
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5FB0C0097"
+					    client     	@155
+					    supplier   	@162
+					    vertices   	(list Points
+						(1515, 672)
+						(2079, 672))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object ActivityStateView "Acreditación y documentación para el desembolso" @165
+					    Parent_View 	@161
+					    location   	(2243, 912)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object ItemLabel
+						Parent_View 	@165
+						location   	(2243, 913)
+						fill_color 	13434879
+						anchor_loc 	1
+						nlines     	2
+						max_width  	572
+						justify    	0
+						label      	"Acreditación y documentación para el desembolso")
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5FA6902F0"
+					    width      	678
+					    annotation 	1
+					    autoResize 	TRUE)
+					(object TransView "" @166
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5FB80039E"
+					    client     	@162
+					    supplier   	@165
+					    vertices   	(list Points
+						(2248, 724)
+						(2244, 859))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object ActivityStateView "Otorga efectivo" @167
+					    Parent_View 	@161
+					    location   	(2256, 1216)
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object ItemLabel
+						Parent_View 	@167
+						location   	(2256, 1217)
+						fill_color 	13434879
+						anchor_loc 	1
+						nlines     	2
+						max_width  	269
+						justify    	0
+						label      	"Otorga efectivo")
+					    icon_style 	"Icon"
+					    line_color 	3342489
+					    fill_color 	13434879
+					    quidu      	"5AC5FA7E00BF"
+					    annotation 	1
+					    autoResize 	TRUE)
+					(object TransView "" @168
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5FB8302B6"
+					    client     	@165
+					    supplier   	@167
+					    vertices   	(list Points
+						(2245, 964)
+						(2253, 1164))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object Swimlane "" @169
+					    location   	(2642, 0)
+					    line_color 	3342489
+					    width      	450)
+					(object TransView "" @170
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5FC07001D"
+					    client     	@167
+					    supplier   	@160
+					    vertices   	(list Points
+						(2193, 1268)
+						(1578, 1788))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object TransView "" @171
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5FC0E0365"
+					    client     	@149
+					    supplier   	@160
+					    vertices   	(list Points
+						(970, 1508)
+						(1494, 1800))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object TransView "" @172
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object SegLabel @173
+						Parent_View 	@172
+						location   	(329, 975)
+						font       	(object Font
+						    size       	9
+						    face       	"Arial"
+						    bold       	FALSE
+						    italics    	FALSE
+						    underline  	FALSE
+						    strike     	FALSE
+						    color      	0
+						    default_color 	TRUE)
+						anchor_loc 	1
+						nlines     	1
+						max_width  	172
+						justify    	0
+						label      	"Déposito"
+						pctDist    	0.610242
+						height     	97
+						orientation 	1)
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5FB59038F"
+					    client     	@142
+					    supplier   	@145
+					    vertices   	(list Points
+						(485, 928)
+						(358, 1100))
+					    line_style 	0
+					    x_offset   	FALSE)
+					(object TransView "" @174
+					    font       	(object Font
+						size       	9
+						face       	"Arial"
+						bold       	FALSE
+						italics    	FALSE
+						underline  	FALSE
+						strike     	FALSE
+						color      	0
+						default_color 	TRUE)
+					    label      	(object SegLabel @175
+						Parent_View 	@174
+						location   	(750, 974)
+						font       	(object Font
+						    size       	9
+						    face       	"Arial"
+						    bold       	FALSE
+						    italics    	FALSE
+						    underline  	FALSE
+						    strike     	FALSE
+						    color      	0
+						    default_color 	TRUE)
+						anchor_loc 	1
+						nlines     	1
+						max_width  	450
+						justify    	0
+						label      	"Cheque"
+						pctDist    	0.500000
+						height     	45
+						orientation 	0)
+					    stereotype 	TRUE
+					    line_color 	3342489
+					    quidu      	"5AC5FB5C00D7"
+					    client     	@142
+					    supplier   	@146
+					    vertices   	(list Points
+						(635, 928)
+						(806, 1084))
+					    line_style 	0
+					    x_offset   	FALSE)))))
 			logical_presentations 	(list unit_reference_list)))
 		logical_presentations 	(list unit_reference_list
 		    (object UseCaseDiagram "Diagrama"
@@ -1308,7 +4616,7 @@
 			origin_x   	356
 			origin_y   	272
 			items      	(list diagram_item_list
-			    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Supervisor de crédito" @44
+			    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Supervisor de crédito" @176
 				ShowCompartmentStereotypes 	TRUE
 				SuppressAttribute 	TRUE
 				SuppressOperation 	TRUE
@@ -1325,7 +4633,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@44
+				    Parent_View 	@176
 				    location   	(639, 432)
 				    anchor_loc 	1
 				    nlines     	2
@@ -1341,7 +4649,7 @@
 				height     	290
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Sistema de crédito" @45
+			    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Sistema de crédito" @177
 				ShowCompartmentStereotypes 	TRUE
 				SuppressAttribute 	TRUE
 				SuppressOperation 	TRUE
@@ -1358,7 +4666,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@45
+				    Parent_View 	@177
 				    location   	(1055, 432)
 				    anchor_loc 	1
 				    nlines     	1
@@ -1374,7 +4682,7 @@
 				height     	290
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Promotor" @46
+			    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Promotor" @178
 				ShowCompartmentStereotypes 	TRUE
 				SuppressAttribute 	TRUE
 				SuppressOperation 	TRUE
@@ -1391,7 +4699,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@46
+				    Parent_View 	@178
 				    location   	(239, 448)
 				    anchor_loc 	1
 				    nlines     	2
@@ -1407,7 +4715,7 @@
 				height     	290
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Cajero" @47
+			    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Cajero" @179
 				ShowCompartmentStereotypes 	TRUE
 				SuppressAttribute 	TRUE
 				SuppressOperation 	TRUE
@@ -1424,7 +4732,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@47
+				    Parent_View 	@179
 				    location   	(1455, 448)
 				    anchor_loc 	1
 				    nlines     	2
@@ -1440,7 +4748,7 @@
 				height     	290
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Supervisor de caja" @48
+			    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Supervisor de caja" @180
 				ShowCompartmentStereotypes 	TRUE
 				SuppressAttribute 	TRUE
 				SuppressOperation 	TRUE
@@ -1457,7 +4765,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@48
+				    Parent_View 	@180
 				    location   	(1871, 448)
 				    anchor_loc 	1
 				    nlines     	2
@@ -1473,38 +4781,7 @@
 				height     	290
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Business Object Model::Entidades::E01-Hoja de ruta" @49
-				ShowCompartmentStereotypes 	TRUE
-				SuppressAttribute 	TRUE
-				SuppressOperation 	TRUE
-				IncludeAttribute 	TRUE
-				IncludeOperation 	TRUE
-				location   	(2368, 224)
-				font       	(object Font
-				    size       	9
-				    face       	"Arial"
-				    bold       	FALSE
-				    italics    	FALSE
-				    underline  	FALSE
-				    strike     	FALSE
-				    color      	0
-				    default_color 	TRUE)
-				label      	(object ItemLabel
-				    Parent_View 	@49
-				    location   	(2368, 398)
-				    anchor_loc 	1
-				    nlines     	2
-				    max_width  	751
-				    justify    	0
-				    label      	"E01-Hoja de ruta")
-				icon       	"Business Entity"
-				icon_style 	"Icon"
-				line_color 	3342489
-				fill_color 	13434879
-				quidu      	"5AC01828031F"
-				annotation 	8
-				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Sectorista de crédito" @50
+			    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Sectorista de crédito" @181
 				ShowCompartmentStereotypes 	TRUE
 				SuppressAttribute 	TRUE
 				SuppressOperation 	TRUE
@@ -1521,7 +4798,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@50
+				    Parent_View 	@181
 				    location   	(255, 944)
 				    anchor_loc 	1
 				    nlines     	2
@@ -1537,7 +4814,7 @@
 				height     	290
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Auxiliar de crédito" @51
+			    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Auxiliar de crédito" @182
 				ShowCompartmentStereotypes 	TRUE
 				SuppressAttribute 	TRUE
 				SuppressOperation 	TRUE
@@ -1554,7 +4831,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@51
+				    Parent_View 	@182
 				    location   	(639, 928)
 				    anchor_loc 	1
 				    nlines     	2
@@ -1570,13 +4847,13 @@
 				height     	290
 				annotation 	8
 				autoResize 	TRUE)
-			    (object ClassView "Class" "Logical View::Business Object Model::Entidades::E02-Solicitud de crédito" @52
+			    (object ClassView "Class" "Logical View::Business Object Model::Trabajadores::Auxiliar de caja" @183
 				ShowCompartmentStereotypes 	TRUE
 				SuppressAttribute 	TRUE
 				SuppressOperation 	TRUE
 				IncludeAttribute 	TRUE
 				IncludeOperation 	TRUE
-				location   	(2768, 224)
+				location   	(992, 720)
 				font       	(object Font
 				    size       	9
 				    face       	"Arial"
@@ -1587,18 +4864,20 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@52
-				    location   	(2768, 398)
+				    Parent_View 	@183
+				    location   	(991, 944)
 				    anchor_loc 	1
 				    nlines     	2
-				    max_width  	751
+				    max_width  	875
 				    justify    	0
-				    label      	"E02-Solicitud de crédito")
-				icon       	"Business Entity"
+				    label      	"Auxiliar de caja")
+				icon       	"Business Worker"
 				icon_style 	"Icon"
 				line_color 	3342489
 				fill_color 	13434879
-				quidu      	"5AC036EA036B"
+				quidu      	"5AC3237F0273"
+				width      	292
+				height     	290
 				annotation 	8
 				autoResize 	TRUE)))))
 	    (object Class_Category "Analysis Model"
@@ -1723,16 +5002,16 @@
 			
 			exportControl 	"Public"
 			logical_models 	(list unit_reference_list
-			    (object Association "$UNNAMED$15"
+			    (object Association "$UNNAMED$53"
 				quid       	"35409E9D02A8"
 				stereotype 	"realize"
 				roles      	(list role_list
-				    (object Role "$UNNAMED$16"
+				    (object Role "$UNNAMED$54"
 					quid       	"35409E9E0294"
 					supplier   	"Use Case View::Use-Case Model::Use Cases::<Use Case Name>::<Use Case Name>"
 					quidu      	"34E37FB203D4"
 					is_navigable 	TRUE)
-				    (object Role "$UNNAMED$17"
+				    (object Role "$UNNAMED$55"
 					quid       	"35409E9E0295"
 					supplier   	"Logical View::Design Model::Use-Case Realizations::<Use-Case Name>::<Use-Case Name>"
 					quidu      	"352F38180276")))
@@ -1749,9 +5028,9 @@
 					
 					stereotype 	"use-case realization"
 					logical_models 	(list unit_reference_list
-					    (object Mechanism @53
+					    (object Mechanism @184
 						logical_models 	(list unit_reference_list))
-					    (object Mechanism @54
+					    (object Mechanism @185
 						logical_models 	(list unit_reference_list)))
 					logical_presentations 	(list unit_reference_list
 					    (object ClassDiagram "<Use Case Name> -  Realize Dependencies"
@@ -1775,7 +5054,7 @@
 						origin_y   	0
 						items      	(list diagram_item_list))
 					    (object InteractionDiagram "<Use Case Name> -  Basic Flow"
-						mechanism_ref 	@53
+						mechanism_ref 	@184
 						quid       	"35081E3603A2"
 						title      	"<Use Case Name> -  Basic Flow"
 						zoom       	100
@@ -1785,7 +5064,7 @@
 						origin_y   	0
 						items      	(list diagram_item_list))
 					    (object InteractionDiagram "<Use Case Name> -  <Flow Type>"
-						mechanism_ref 	@54
+						mechanism_ref 	@185
 						quid       	"3540A0B901AE"
 						title      	"<Use Case Name> -  <Flow Type>"
 						zoom       	100
@@ -1805,7 +5084,7 @@
 					origin_x   	0
 					origin_y   	0
 					items      	(list diagram_item_list
-					    (object NoteView @55
+					    (object NoteView @186
 						location   	(704, 144)
 						font       	(object Font
 						    size       	9
@@ -1817,7 +5096,7 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@55
+						    Parent_View 	@186
 						    location   	(38, 25)
 						    fill_color 	13434879
 						    nlines     	5
@@ -1831,7 +5110,7 @@
 						fill_color 	13434879
 						width      	1356
 						height     	250)
-					    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::<Use Case Name>::<Use Case Name>" @56
+					    (object UseCaseView "Use Case View::Use-Case Model::Use Cases::<Use Case Name>::<Use Case Name>" @187
 						location   	(1152, 528)
 						font       	(object Font
 						    size       	9
@@ -1843,7 +5122,7 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@56
+						    Parent_View 	@187
 						    location   	(1152, 666)
 						    anchor_loc 	1
 						    nlines     	2
@@ -1855,7 +5134,7 @@
 						fill_color 	13434879
 						quidu      	"34E37FB203D4"
 						autoResize 	TRUE)
-					    (object UseCaseView "Logical View::Design Model::Use-Case Realizations::<Use-Case Name>::<Use-Case Name>" @57
+					    (object UseCaseView "Logical View::Design Model::Use-Case Realizations::<Use-Case Name>::<Use-Case Name>" @188
 						location   	(608, 960)
 						font       	(object Font
 						    size       	9
@@ -1867,7 +5146,7 @@
 						    color      	0
 						    default_color 	TRUE)
 						label      	(object ItemLabel
-						    Parent_View 	@57
+						    Parent_View 	@188
 						    location   	(608, 1148)
 						    anchor_loc 	1
 						    nlines     	2
@@ -1875,7 +5154,7 @@
 						    justify    	0
 						    label      	"<Use-Case Name>")
 						stereotype 	(object ItemLabel
-						    Parent_View 	@57
+						    Parent_View 	@188
 						    location   	(608, 1078)
 						    anchor     	10
 						    anchor_loc 	1
@@ -1889,7 +5168,7 @@
 						fill_color 	13434879
 						quidu      	"352F38180276"
 						autoResize 	TRUE)
-					    (object AssociationViewNew "$UNNAMED$15" @58
+					    (object AssociationViewNew "$UNNAMED$53" @189
 						location   	(876, 741)
 						font       	(object Font
 						    size       	9
@@ -1900,8 +5179,8 @@
 						    strike     	FALSE
 						    color      	0
 						    default_color 	TRUE)
-						stereotype 	(object SegLabel @59
-						    Parent_View 	@58
+						stereotype 	(object SegLabel @190
+						    Parent_View 	@189
 						    location   	(874, 746)
 						    font       	(object Font
 							size       	9
@@ -1924,26 +5203,26 @@
 						line_color 	3342489
 						quidu      	"35409E9D02A8"
 						roleview_list 	(list RoleViews
-						    (object RoleView "$UNNAMED$16" @60
-							Parent_View 	@58
+						    (object RoleView "$UNNAMED$54" @191
+							Parent_View 	@189
 							location   	(236, -539)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"35409E9E0294"
-							client     	@58
-							supplier   	@56
+							client     	@189
+							supplier   	@187
 							vertices   	(list Points
 							    (876, 741)
 							    (943, 689))
 							line_style 	0)
-						    (object RoleView "$UNNAMED$17" @61
-							Parent_View 	@58
+						    (object RoleView "$UNNAMED$55" @192
+							Parent_View 	@189
 							location   	(236, -539)
 							stereotype 	TRUE
 							line_color 	3342489
 							quidu      	"35409E9E0295"
-							client     	@58
-							supplier   	@57
+							client     	@189
+							supplier   	@188
 							vertices   	(list Points
 							    (876, 741)
 							    (678, 899))
@@ -1962,16 +5241,16 @@
 				quid       	"35DB3CB002BC"
 				documentation 	"This is a sub-process or thread within the <name of process of which this thread is a sub-process> process which handles <enter a description of what this thread does>.  A separate thread was chosen for this to be able to <enter the rationale for creating a separate thread>."
 				stereotype 	"thread")
-			    (object Association "$UNNAMED$18"
+			    (object Association "$UNNAMED$56"
 				quid       	"35DB3E72017C"
 				roles      	(list role_list
-				    (object Role "$UNNAMED$19"
+				    (object Role "$UNNAMED$57"
 					quid       	"35DB3E73005A"
 					supplier   	"Logical View::Design Model::Process View::<Process Name>"
 					quidu      	"35DB3C8302D0"
 					is_navigable 	TRUE
 					is_aggregate 	TRUE)
-				    (object Role "$UNNAMED$20"
+				    (object Role "$UNNAMED$58"
 					quid       	"35DB3E730096"
 					supplier   	"Logical View::Design Model::Process View::<Thread Name>"
 					quidu      	"35DB3CB002BC"
@@ -1988,7 +5267,7 @@
 				origin_x   	0
 				origin_y   	0
 				items      	(list diagram_item_list
-				    (object ClassView "Class" "Logical View::Design Model::Process View::<Process Name>" @62
+				    (object ClassView "Class" "Logical View::Design Model::Process View::<Process Name>" @193
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -2003,7 +5282,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@62
+					    Parent_View 	@193
 					    location   	(122, 436)
 					    fill_color 	13434879
 					    nlines     	1
@@ -2011,7 +5290,7 @@
 					    justify    	0
 					    label      	"<Process Name>")
 					stereotype 	(object ItemLabel
-					    Parent_View 	@62
+					    Parent_View 	@193
 					    location   	(122, 389)
 					    fill_color 	13434879
 					    anchor     	10
@@ -2027,7 +5306,7 @@
 					height     	172
 					annotation 	8
 					autoResize 	TRUE)
-				    (object ClassView "Class" "Logical View::Design Model::Process View::<Thread Name>" @63
+				    (object ClassView "Class" "Logical View::Design Model::Process View::<Thread Name>" @194
 					ShowCompartmentStereotypes 	TRUE
 					IncludeAttribute 	TRUE
 					IncludeOperation 	TRUE
@@ -2042,7 +5321,7 @@
 					    color      	0
 					    default_color 	TRUE)
 					label      	(object ItemLabel
-					    Parent_View 	@63
+					    Parent_View 	@194
 					    location   	(740, 436)
 					    fill_color 	13434879
 					    nlines     	1
@@ -2050,7 +5329,7 @@
 					    justify    	0
 					    label      	"<Thread Name>")
 					stereotype 	(object ItemLabel
-					    Parent_View 	@63
+					    Parent_View 	@194
 					    location   	(740, 389)
 					    fill_color 	13434879
 					    anchor     	10
@@ -2066,32 +5345,32 @@
 					height     	172
 					annotation 	8
 					autoResize 	TRUE)
-				    (object AssociationViewNew "$UNNAMED$18" @64
+				    (object AssociationViewNew "$UNNAMED$56" @195
 					location   	(596, 464)
 					stereotype 	TRUE
 					line_color 	3342489
 					quidu      	"35DB3E72017C"
 					roleview_list 	(list RoleViews
-					    (object RoleView "$UNNAMED$19" @65
-						Parent_View 	@64
+					    (object RoleView "$UNNAMED$57" @196
+						Parent_View 	@195
 						location   	(-300, 0)
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"35DB3E73005A"
-						client     	@64
-						supplier   	@62
+						client     	@195
+						supplier   	@193
 						vertices   	(list Points
 						    (596, 464)
 						    (463, 464))
 						line_style 	0)
-					    (object RoleView "$UNNAMED$20" @66
-						Parent_View 	@64
+					    (object RoleView "$UNNAMED$58" @197
+						Parent_View 	@195
 						location   	(-300, 0)
 						stereotype 	TRUE
 						line_color 	3342489
 						quidu      	"35DB3E730096"
-						client     	@64
-						supplier   	@63
+						client     	@195
+						supplier   	@194
 						vertices   	(list Points
 						    (596, 464)
 						    (730, 464))
@@ -2107,7 +5386,7 @@
 			origin_x   	0
 			origin_y   	0
 			items      	(list diagram_item_list
-			    (object NoteView @67
+			    (object NoteView @198
 				location   	(672, 304)
 				font       	(object Font
 				    size       	9
@@ -2119,7 +5398,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@67
+				    Parent_View 	@198
 				    location   	(28, 19)
 				    fill_color 	13434879
 				    nlines     	13
@@ -2143,7 +5422,7 @@
 				fill_color 	13434879
 				width      	1313
 				height     	582)
-			    (object NoteView @68
+			    (object NoteView @199
 				location   	(1696, 160)
 				font       	(object Font
 				    size       	9
@@ -2155,7 +5434,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@68
+				    Parent_View 	@199
 				    location   	(1358, 29)
 				    fill_color 	13434879
 				    nlines     	5
@@ -2191,7 +5470,7 @@
 			origin_x   	0
 			origin_y   	0
 			items      	(list diagram_item_list
-			    (object NoteView @69
+			    (object NoteView @200
 				location   	(576, 256)
 				font       	(object Font
 				    size       	9
@@ -2203,7 +5482,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@69
+				    Parent_View 	@200
 				    location   	(44, 31)
 				    fill_color 	13434879
 				    nlines     	9
@@ -2223,7 +5502,7 @@
 				fill_color 	13434879
 				width      	1088
 				height     	463)
-			    (object NoteView @70
+			    (object NoteView @201
 				location   	(1520, 176)
 				font       	(object Font
 				    size       	9
@@ -2235,7 +5514,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@70
+				    Parent_View 	@201
 				    location   	(1182, 45)
 				    fill_color 	13434879
 				    nlines     	5
@@ -2273,7 +5552,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object NoteView @71
+		    (object NoteView @202
 			location   	(768, 384)
 			font       	(object Font
 			    size       	9
@@ -2285,7 +5564,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@71
+			    Parent_View 	@202
 			    location   	(121, 96)
 			    fill_color 	13434879
 			    nlines     	14
@@ -2345,7 +5624,7 @@
 			origin_x   	0
 			origin_y   	0
 			items      	(list diagram_item_list
-			    (object NoteView @72
+			    (object NoteView @203
 				location   	(624, 160)
 				font       	(object Font
 				    size       	9
@@ -2357,7 +5636,7 @@
 				    color      	0
 				    default_color 	TRUE)
 				label      	(object ItemLabel
-				    Parent_View 	@72
+				    Parent_View 	@203
 				    location   	(21, 26)
 				    fill_color 	13434879
 				    nlines     	5
@@ -2384,7 +5663,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object SubSysView "Component View::Implementation Model" @73
+		    (object SubSysView "Component View::Implementation Model" @204
 			location   	(736, 800)
 			font       	(object Font
 			    size       	9
@@ -2396,7 +5675,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@73
+			    Parent_View 	@204
 			    location   	(552, 713)
 			    fill_color 	13434879
 			    nlines     	2
@@ -2459,7 +5738,7 @@
 		origin_x   	0
 		origin_y   	0
 		items      	(list diagram_item_list
-		    (object ProcessorView "<processor name>" @74
+		    (object ProcessorView "<processor name>" @205
 			location   	(512, 1056)
 			font       	(object Font
 			    size       	9
@@ -2471,7 +5750,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@74
+			    Parent_View 	@205
 			    location   	(276, 900)
 			    nlines     	2
 			    max_width  	400
@@ -2482,7 +5761,7 @@
 			width      	475
 			height     	381
 			annotation 	3)
-		    (object DeviceView "<device name>" @75
+		    (object DeviceView "<device name>" @206
 			location   	(1040, 1056)
 			font       	(object Font
 			    size       	9
@@ -2494,7 +5773,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@75
+			    Parent_View 	@206
 			    location   	(867, 950)
 			    nlines     	2
 			    max_width  	275
@@ -2505,16 +5784,16 @@
 			width      	350
 			height     	282
 			annotation 	0)
-		    (object ConnectionView "" @76
+		    (object ConnectionView "" @207
 			stereotype 	TRUE
 			quidu      	"34DBBD4B008C"
-			client     	@74
-			supplier   	@75
+			client     	@205
+			supplier   	@206
 			vertices   	(list Points
 			    (718, 1056)
 			    (865, 1056))
 			line_style 	0)
-		    (object NoteView @77
+		    (object NoteView @208
 			location   	(816, 304)
 			font       	(object Font
 			    size       	9
@@ -2526,7 +5805,7 @@
 			    color      	0
 			    default_color 	TRUE)
 			label      	(object ItemLabel
-			    Parent_View 	@77
+			    Parent_View 	@208
 			    location   	(38, 29)
 			    fill_color 	13434879
 			    nlines     	11
